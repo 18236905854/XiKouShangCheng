@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="选择收货地址"
+            android:textSize="15sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_text"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/tv_sku_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/ic_sku_close"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#E4E4E4"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_height="0.5dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_cut_choose_address"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"/>
+
+    <TextView
+        android:id="@+id/tv_cut_choose_address_add"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="34dp"
+        android:text="添加收货地址"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@drawable/bg_btn_fight_group"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"/>
+
+</LinearLayout>

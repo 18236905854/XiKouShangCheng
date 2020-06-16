@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_custom_head"
+        android:layout_width="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/me_head_icon"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/tv_custom_name"
+        android:layout_width="wrap_content"
+        android:layout_alignTop="@id/iv_custom_head"
+        android:layout_toRightOf="@id/iv_custom_head"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/color_text"
+        android:textSize="@dimen/text_14sp"
+        android:text="唐俊"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_custom_time"
+        android:layout_toRightOf="@id/iv_custom_head"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/tv_custom_name"
+        android:layout_marginTop="6dp"
+        android:textSize="@dimen/text_12sp"
+        android:textColor="#999999"
+        android:text="一周前"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_custom_add_attention"
+        android:layout_width="70dp"
+        android:layout_marginTop="32dp"
+        android:text="+ 关注"
+        android:stateListAnimator="@null"
+        android:textSize="@dimen/text_12sp"
+        android:layout_marginRight="20dp"
+        android:textColor="@drawable/bg_shop_attention_text_selector"
+        android:background="@drawable/bg_shop_attention_selector"
+        android:layout_alignParentRight="true"
+        android:layout_height="29dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_custom_child"
+        android:layout_below="@id/btn_custom_add_attention"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="335dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_custom_works_name"
+        android:layout_width="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_text"
+        android:layout_below="@id/rv_custom_child"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_custom_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tv_custom_works_name"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:textColor="@color/color_text"
+        android:textSize="@dimen/text_14sp"
+        android:lineSpacingExtra="6dp"
+        android:text="我从来都以为, 少女心是一个女性需要终身拥有的东西 它能阻止你变得俗气、势利。"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/tv_custom_content"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/tv_custom_love"
+            android:layout_width="wrap_content"
+            android:text="2568"
+            android:gravity="center"
+            android:drawablePadding="4dp"
+            android:textSize="@dimen/text_12sp"
+            android:textColor="#999999"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/custom_love"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_custom_msg"
+            android:layout_toLeftOf="@id/tv_custom_love"
+            android:text="1672"
+            android:drawableLeft="@drawable/custom_msg"
+            android:gravity="center"
+            android:drawablePadding="4dp"
+            android:textSize="@dimen/text_12sp"
+            android:textColor="#999999"
+            android:layout_marginRight="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="#E4E4E4"
+            android:layout_height="0.5dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

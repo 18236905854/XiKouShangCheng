@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_home_cardview">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_zero_grid_logo"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            app:riv_corner_radius_top_left="7dp"
+            app:riv_corner_radius_top_right="7dp"
+            android:src="@drawable/ic_loading"
+            android:layout_height="165dp" />
+
+        <ImageView
+            android:id="@+id/iv_goods_empty"
+            android:layout_width="60dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_goods_empty"
+            android:layout_centerInParent="true"
+            android:layout_height="60dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_zero_grid_name"
+        android:maxLines="2"
+        android:textSize="@dimen/text_12sp"
+        android:textColor="@color/color_text"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        tools:text="商品名称"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="30dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_end"
+            android:layout_width="wrap_content"
+            android:textColor="#999999"
+            android:layout_centerVertical="true"
+            android:textSize="10sp"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center_vertical"
+            android:text="距离结束:"
+            android:layout_height="wrap_content" />
+
+        <cn.iwgang.countdownview.CountdownView
+            android:id="@+id/count_zero_hot_grid"
+            android:layout_toRightOf="@id/tv_end"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            app:isConvertDaysToHours="true"
+            app:suffixGravity="center"
+            app:isShowHour="true"
+            app:isShowMinute="true"
+            app:isShowSecond="true"
+            app:isShowMillisecond="false"
+            app:suffixHour=":"
+            app:suffixMinute=":"
+            app:suffixTextColor="#999999"
+            app:suffixTextSize="10sp"
+            app:timeTextColor="#999999"
+            app:timeTextSize="@dimen/text_14sp"/>
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:textSize="10sp"
+            android:layout_toRightOf="@id/tv_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/tv_rmb"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#F94119"
+            android:text="¥"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/tv_zero_hot_price"
+            android:layout_toRightOf="@id/tv_rmb"
+            android:layout_width="wrap_content"
+            android:textColor="#F94119"
+            android:layout_centerVertical="true"
+            android:text="0"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        
+        <TextView
+            android:layout_width="65dp"
+            android:stateListAnimator="@null"
+            android:id="@+id/btn_zero_hot"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_zero_hot_enable"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_12sp"
+            android:layout_alignParentRight="true"
+            android:layout_height="29dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

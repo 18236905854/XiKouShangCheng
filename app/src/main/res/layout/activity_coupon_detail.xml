@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_tool_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_coupon_cardview"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/iv_coupon_item_icon"
+            android:layout_width="40dp"
+            android:src="@drawable/coupon_icon"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/tv_coupon_item_money"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/iv_coupon_item_icon"
+            android:layout_marginLeft="15dp"
+            android:textSize="22sp"
+            android:textColor="@color/colorWhite"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_coupon_item_money_tip"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/tv_coupon_item_money"
+            android:layout_alignBaseline="@id/tv_coupon_item_money"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp"
+            android:text="@string/coupon_money_tip"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_coupon_item_sum_money"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/tv_coupon_item_money_tip"
+            android:layout_alignBaseline="@id/tv_coupon_item_money"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_coupon_item_time"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/iv_coupon_item_icon"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/tv_coupon_item_sum_money"
+            android:layout_marginTop="5dp"
+            android:textSize="10sp"
+            android:textColor="@color/colorWhite"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_coupon_give_away"
+            android:layout_width="wrap_content"
+            android:text="转赠"
+            android:textSize="10sp"
+            android:background="@drawable/bg_coupon_detail_transfer"
+            android:textColor="#F2641E"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:visibility="gone"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/coupon_used_tip"
+        android:textSize="@dimen/text_16sp"
+        android:textColor="@color/color_text"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#E4E4E4"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_height="0.5dp"/>
+
+    <com.kennyc.view.MultiStateView
+        android:layout_width="match_parent"
+        android:id="@+id/state_view_coupon_record"
+        app:msv_errorView="@layout/error_view"
+        app:msv_emptyView="@layout/empty_coupon_view"
+        app:msv_loadingView="@layout/loading_view"
+        app:msv_viewState="content"
+        app:msv_animateViewChanges="true"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_coupon_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    </com.kennyc.view.MultiStateView>
+</LinearLayout>

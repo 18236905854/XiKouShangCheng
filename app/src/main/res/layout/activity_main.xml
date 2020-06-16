@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_tool_bar"
+        android:visibility="gone"/>
+
+    <com.xk.mall.utils.ViewPagerSlide
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff" />
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tab_main"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#ffffff"
+        tl:tl_iconHeight="20dp"
+        tl:tl_iconWidth="20dp"
+        tl:tl_specialIconWidth="30dp"
+        tl:tl_specialIconHeight="25dp"
+        tl:tl_indicator_color="#2C97DE"
+        tl:tl_indicator_height="0dp"
+        tl:tl_underline_color="#DDDDDD"
+        tl:tl_underline_gravity="TOP"
+        tl:tl_underline_height="1px"
+        tl:tl_textSelectColor="@color/color_tab_select"
+        tl:tl_textUnselectColor="@color/color_tab_unselect"
+        tl:tl_textsize="10sp" />
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="50dp"-->
+    <!--android:id="@+id/ll_main_center"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_height="71dp">-->
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--android:layout_width="42dp"-->
+    <!--tl:civ_border_width="3dp"-->
+    <!--tl:civ_border_color="@color/colorWhite"-->
+    <!--tl:civ_border_overlay="true"-->
+    <!--android:src="@drawable/tab_main_center"-->
+    <!--android:layout_height="42dp" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:textSize="10sp"-->
+    <!--android:textColor="@color/color_tab_unselect"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--android:text="@string/main_custom_made" />-->
+
+    <!--</LinearLayout>-->
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_activity_cut_logo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_activity_cut_four"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_activity_cut_discount"
+        android:layout_width="wrap_content"
+        android:text="3.7折起"
+        android:textSize="9sp"
+        android:visibility="gone"
+        android:alpha="0.6"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_fight_group_authen"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

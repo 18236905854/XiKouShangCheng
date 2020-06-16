@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="@dimen/dp_5"
+    android:paddingRight="@dimen/dp_5"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginLeft="@dimen/dp_15"
+    android:layout_marginRight="@dimen/dp_15"
+    android:background="@drawable/bg_near_cardview"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_share_time"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/text_14sp"
+        android:textColor="@color/color_text"
+        tools:text="时间"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_share_state"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="12dp"
+        tools:text="时间"
+        android:layout_alignBaseline="@id/tv_share_time"
+        android:textSize="@dimen/text_14sp"
+        android:textColor="#F2641E"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tv_share_state"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/rl_reason"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_share_reason"
+            android:layout_width="wrap_content"
+            android:maxWidth="80dp"
+            android:visibility="gone"
+            tools:text="截图不清晰，请重新上传"
+            android:textSize="@dimen/text_12sp"
+            android:textColor="#F2641E"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_share_num"
+            android:layout_width="wrap_content"
+            tools:text="任务值+1"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/bg_material_task"
+            android:textSize="@dimen/text_12sp"
+            android:textColor="#E52024"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_img"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/tv_share_time"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/rl_reason"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

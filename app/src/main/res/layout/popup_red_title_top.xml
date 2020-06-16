@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:textColor="#444444"
+            android:textSize="15sp"
+            android:text="收入"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line"/>
+    </RelativeLayout>
+
+    <com.donkingliang.labels.LabelsView
+        android:id="@+id/labels_in"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        app:labelBackground="@drawable/bg_transaction_labels"
+        app:labelTextColor="@drawable/bg_labels_yewu_text"
+        app:labelTextPaddingTop="11dp"
+        app:labelTextPaddingBottom="11dp"
+        app:labelTextPaddingLeft="23dp"
+        app:labelTextPaddingRight="23dp"
+        app:selectType="SINGLE"
+        app:labelTextSize="13sp"
+        app:lineMargin="10dp"
+        app:wordMargin="10dp">
+    </com.donkingliang.labels.LabelsView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:textColor="#444444"
+            android:textSize="15sp"
+            android:text="支出"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line"/>
+    </RelativeLayout>
+
+    <com.donkingliang.labels.LabelsView
+        android:id="@+id/labels_out"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        app:labelBackground="@drawable/bg_transaction_labels"
+        app:labelTextColor="@drawable/bg_labels_yewu_text"
+        app:labelTextPaddingTop="11dp"
+        app:labelTextPaddingBottom="11dp"
+        app:labelTextPaddingLeft="23dp"
+        app:labelTextPaddingRight="23dp"
+        app:selectType="SINGLE"
+        app:labelTextSize="13sp"
+        app:lineMargin="10dp"
+        app:wordMargin="10dp">
+    </com.donkingliang.labels.LabelsView>
+
+    <Button
+        android:id="@+id/btn_confirm_red"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_14sp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_login_btn"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="28dp"
+        android:layout_height="40dp" />
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_cut_list_logo"
+        android:layout_width="35dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/me_head_icon"
+        android:layout_height="35dp" />
+    
+    <TextView
+        android:id="@+id/tv_cut_list_name"
+        android:layout_width="wrap_content"
+        android:text="叶也"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/text_12sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/color_text"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_toRightOf="@id/iv_cut_list_logo"
+        android:text="12分钟前"
+        android:textColor="#999999"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_cut_list_money"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/text_13sp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#F94119"
+        android:text="13.5元"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

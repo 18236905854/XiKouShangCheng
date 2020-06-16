@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_home_cardview">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_global_logo"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            app:riv_corner_radius_top_left="7dp"
+            app:riv_corner_radius_top_right="7dp"
+            android:src="@drawable/ic_loading" />
+
+        <ImageView
+            android:id="@+id/iv_goods_empty"
+            android:layout_width="60dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_goods_empty"
+            android:layout_centerInParent="true"
+            android:layout_height="60dp" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_global_name"
+        android:maxLines="2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_12sp"
+        android:ellipsize="end"
+        android:textColor="@color/color_text"
+        android:layout_marginTop="5dp"
+        android:layout_height="30dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#F94119"
+            android:textSize="9sp"
+            android:background="@drawable/bg_global_dotted"
+            android:text="券"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_global_coupon"
+            android:layout_width="wrap_content"
+            android:background="@drawable/bg_global_dotted_money"
+            android:textColor="#F94119"
+            android:textSize="9sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="¥"
+            android:textSize="10sp"
+            android:textColor="#F94119"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_global_now_price"
+            android:layout_width="wrap_content"
+            android:textColor="#F94119"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:text="234"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_global_real_price"
+            android:layout_width="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#CCCCCC"
+            android:layout_marginTop="-2dp"
+            android:layout_marginLeft="5dp"
+            tools:text="¥234"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

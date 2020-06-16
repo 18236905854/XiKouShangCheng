@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/many_cart_tool_bar" />
+
+    <com.kennyc.view.MultiStateView
+        android:id="@+id/state_view_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_animateViewChanges="true"
+        app:msv_emptyView="@layout/empty_message_view"
+        app:msv_errorView="@layout/error_view"
+        app:msv_loadingView="@layout/loading_view"
+        app:msv_viewState="content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F4F4F4">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_many_cart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/rl_many_cart_bottom"
+                android:layout_marginTop="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_many_cart_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:elevation="0.5dp">
+
+                <TextView
+                    android:id="@+id/tv_many_cart_money_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:text="合计"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/text_12sp" />
+
+                <TextView
+                    android:id="@+id/tv_many_cart_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tv_many_cart_money_tip"
+                    android:text="¥0"
+                    android:textColor="#F94119"
+                    android:textSize="@dimen/text_20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_many_cart_discount_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_many_cart_money"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toRightOf="@id/tv_many_cart_money"
+                    android:text="优惠¥0"
+                    android:textColor="#999999"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_many_cart_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@id/tv_many_cart_discount_money"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/bg_btn_fight_group"
+                    android:gravity="center"
+                    android:text="去结算"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </com.kennyc.view.MultiStateView>
+</LinearLayout>

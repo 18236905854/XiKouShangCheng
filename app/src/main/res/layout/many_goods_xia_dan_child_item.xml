@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_many_goods_xiadan_logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <TextView
+            android:id="@+id/tv_many_goods_xiadan_price"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_12sp"
+            android:textStyle="bold"
+            android:layout_alignBaseline="@id/tv_many_goods_xiadan_name"
+            android:textColor="@color/color_text"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="14dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_many_goods_xiadan_name"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/iv_many_goods_xiadan_logo"
+            android:layout_toLeftOf="@id/tv_many_goods_xiadan_price"
+            android:layout_marginRight="@dimen/dp_20"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/text_12sp"
+            android:textColor="@color/color_text"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="6dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_many_goods_xiadan_sku"
+            android:layout_width="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#999999"
+            android:layout_toRightOf="@id/iv_many_goods_xiadan_logo"
+            android:layout_below="@id/tv_many_goods_xiadan_name"
+            android:layout_toLeftOf="@id/tv_many_cart_num"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_many_goods_xiadan_real_price"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/tv_many_goods_xiadan_sku"
+            android:layout_below="@id/tv_many_goods_xiadan_name"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:textSize="10sp"
+            android:textColor="#999999"
+            android:layout_marginLeft="8dp"
+            android:layout_alignBaseline="@id/tv_many_goods_xiadan_sku"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_many_cart_num"
+            android:layout_width="wrap_content"
+            android:textSize="10sp"
+            android:layout_marginTop="4dp"
+            android:textColor="#999999"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_many_goods_xiadan_price"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_many_cart_discount"
+            android:layout_width="wrap_content"
+            android:textColor="#F94119"
+            android:textSize="10sp"
+            android:layout_below="@id/tv_many_goods_xiadan_sku"
+            android:layout_toRightOf="@id/iv_many_goods_xiadan_logo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_hot_kanlide"
+            android:paddingRight="4dp"
+            android:paddingLeft="6dp"
+            android:paddingTop="@dimen/dp_3"
+            android:paddingBottom="2dp"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

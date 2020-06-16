@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_tool_bar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="25dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_message_detail_title"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/color_text"
+                    android:textSize="17sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toLeftOf="@id/iv_message_detail_see"
+                    android:text="为了回馈客户,现开展赠礼活动"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_message_detail_time"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text_12sp"
+                    android:textColor="#CCCCCC"
+                    android:text="2019-7-1 13:24"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_below="@id/tv_message_detail_title"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/iv_message_detail_see"
+                    android:layout_width="20dp"
+                    android:src="@drawable/ic_message_see"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="20dp" />
+                
+                <TextView
+                    android:id="@+id/tv_message_detail_see"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/iv_message_detail_see"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="7dp"
+                    android:text="1235"
+                    android:textSize="10sp"
+                    android:textColor="#CCCCCC"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#E4E4E4"
+                android:layout_marginTop="20dp"
+                android:layout_height="0.5dp"/>
+            
+            <TextView
+                android:id="@+id/tv_message_detail_content"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/text_14sp"
+                android:layout_marginTop="@dimen/dp_15"
+                android:textColor="#666666"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_message_detail_img"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_height="175dp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

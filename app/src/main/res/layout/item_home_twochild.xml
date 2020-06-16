@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_home_cardview">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_goods"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius_top_left="7dp"
+        app:riv_corner_radius_top_right="7dp"
+        android:src="@drawable/ic_loading" />
+
+    <TextView
+        android:id="@+id/tv_vip_discout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.4"
+        android:background="@drawable/bg_vip_discout"
+        android:paddingLeft="7dp"
+        android:paddingTop="3dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="3dp"
+        android:text="会员3折"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_goods"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="伊芙丽裙子女2019中长款高腰 a字裙韩版修身黄色v领连衣..."
+        android:textColor="#444444"
+        android:textSize="@dimen/text_14sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_hot"
+        android:layout_below="@+id/tv_goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_bottom_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_goods_name"
+            android:background="@drawable/bg_hot_sale_num"
+            android:paddingLeft="3dp"
+            android:paddingTop="1dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="1dp"
+            android:text="最低3折"
+            android:textColor="#F94119"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/tv_hot_sale_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_goods_name"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/bg_many_share_money"
+            android:paddingLeft="3dp"
+            android:paddingTop="1dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="1dp"
+            android:text="分享赚999"
+            android:textColor="@color/colorWhite"
+            android:textSize="9sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_hot"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="13dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/money"
+            android:layout_gravity="bottom"
+            android:textColor="#F94119"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="222"
+            android:layout_gravity="bottom"
+            android:textStyle="bold"
+            android:textColor="#F94119"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_line_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="¥333"
+            android:layout_gravity="bottom"
+            android:textColor="#CCCCCC"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+</RelativeLayout>
+
+

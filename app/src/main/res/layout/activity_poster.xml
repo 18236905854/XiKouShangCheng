@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_tool_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="#444444"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/rl_poster_copy"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_poster_goods"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/bg_poster_goods"
+                android:layout_marginRight="25dp"
+                android:padding="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="13dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_poster_qrcode"
+                    android:layout_width="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="60dp" />
+
+                <TextView
+                    android:id="@+id/tv_poster_service"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="我已准备好为您服务"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="10sp"
+                    android:textColor="#999999"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_poster_code"
+                    android:layout_above="@id/tv_poster_service"
+                    android:layout_marginBottom="8dp"
+                    android:text="喜扣达人 ID: 1558099"
+                    android:textColor="#BB9445"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_poster_price"
+                    android:layout_above="@id/tv_poster_code"
+                    android:layout_marginBottom="27dp"
+                    android:textSize="17sp"
+                    android:textColor="#F94119"
+                    android:textStyle="bold"
+                    android:text="399"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_poster_line_price"
+                    android:layout_above="@id/tv_poster_code"
+                    android:layout_marginBottom="27dp"
+                    android:text="599"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@id/tv_poster_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_poster_goods_name"
+                    android:layout_width="match_parent"
+                    android:text="欧洲站女装欧货潮2019新款内搭宽松白色t恤女短袖打底衫春夏体恤"
+                    android:layout_above="@id/tv_poster_price"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:textSize="@dimen/text_12sp"
+                    android:textColor="@color/color_text"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/iv_poster_goods"
+                    android:layout_width="match_parent"
+                    android:layout_above="@id/tv_poster_goods_name"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_poster_copy"
+            android:layout_width="match_parent"
+            android:layout_above="@id/ll_poster_bottom"
+            android:layout_height="63dp">
+
+            <TextView
+                android:id="@+id/tv_poster_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:textSize="@dimen/text_12sp"
+                android:textColor="#999999"
+                android:text="喜扣全球买手精品正在热卖中，好货不等人快来抢购吧！"
+                android:layout_toLeftOf="@id/tv_poster_copy"
+                android:layout_marginRight="55dp"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_height="wrap_content" />
+            
+            <TextView
+                android:id="@+id/tv_poster_copy"
+                android:layout_width="50dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="复制"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:background="@drawable/bg_poster_share"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_height="28dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_poster_bottom"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:elevation="2dp"
+            android:paddingRight="18dp"
+            android:paddingLeft="18dp"
+            android:layout_alignParentBottom="true"
+            android:layout_height="64dp">
+
+            <TextView
+                android:id="@+id/tv_poster_save"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="保存相册"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/bg_poster_save"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_poster_share"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/bg_poster_share"
+                android:text="分享好友"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

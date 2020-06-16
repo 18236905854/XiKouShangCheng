@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+            layout="@layout/base_tool_bar"
+           />
+
+
+   <LinearLayout
+       android:layout_marginTop="50dp"
+       android:layout_marginLeft="40dp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="重置支付密码账号:"
+           android:textColor="#ff999999"
+           android:textSize="16sp"
+           />
+       <TextView
+           android:id="@+id/tv_phone"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text=""
+           android:textColor="#ff999999"
+           android:textSize="16sp"
+           />
+
+   </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_height="60dp">
+
+        <com.xk.mall.view.widget.ClearEditText
+            android:id="@+id/et_psd"
+            android:hint="设置6位纯数字的支付密码"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:maxLength="6"
+            android:inputType="numberPassword"
+            android:textColorHint="#CCCCCC"
+            android:textSize="15sp"
+            android:layout_above="@id/lineTwo"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/lineTwo"
+            android:layout_width="match_parent"
+            android:background="@color/line"
+            android:layout_alignParentBottom="true"
+            android:layout_height="0.5dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_height="60dp">
+
+        <com.xk.mall.view.widget.ClearEditText
+            android:id="@+id/et_psd_two"
+            android:hint="再次确认支付密码"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:maxLength="6"
+            android:textSize="15sp"
+            android:inputType="numberPassword"
+            android:textColorHint="#CCCCCC"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/line"
+            android:layout_alignParentBottom="true"
+            android:layout_height="0.5dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:enabled="false"
+        android:stateListAnimator="@null"
+        android:text="确定"
+        android:textSize="@dimen/text_16sp"
+        android:background="@drawable/bg_register_btn_selector"
+        android:textColor="@color/colorWhite"
+        android:layout_height="40dp" />
+
+</LinearLayout>

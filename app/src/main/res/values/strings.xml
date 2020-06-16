@@ -1,0 +1,240 @@
+<resources>
+    <!--<string name="app_name">喜扣</string>-->
+    <string name="splash_tip">个性定制 标准智造</string>
+    <string name="easy_permissions_sd">该APP需要您允许打开电话和访问设备上的文件的权限</string>
+    <string name="call_phone_permission">该APP需要您允许打开电话权限</string>
+    <string name="easy_permissions_camera">该APP需要您允许访问相机的权限</string>
+    <string name="easy_permissions_location">该APP需要您允许访问位置的权限</string>
+    <string name="zero">0</string>
+    <!--登录页面文字-->
+    <string name="login_welcome">欢迎您登录喜扣</string>
+    <string name="login_phone_text">手机密码登录</string>
+    <string name="login_text">登录</string>
+    <string name="login_quick">快速注册登录</string>
+    <string name="login_forget">忘记密码</string>
+    <string name="login_wechat">微信登录</string>
+    <string name="login_phone_hint">请输入手机号</string>
+    <string name="login_psd_hint">请输入密码</string>
+    <string name="login_code_hint">请输入验证码</string>
+    <string name="login_get_code">获取验证码</string>
+    <!--登录页面文字-->
+
+    <!--注册页面文字-->
+    <string name="register_phone_hint">请输入手机号</string>
+    <string name="register_code_hint">请输入验证码</string>
+    <string name="register_invitation_code_hint">请输入邀请码</string>
+    <string name="register_text">注册并登录</string>
+    <string name="register_text_desc">我已认真阅读、理解并同意</string>
+    <string name="register_text_desc_protocol">《用户服务协议》</string>
+    <string name="register_third">—— 第三方账号快速登录 ——</string>
+    <!--注册页面文字-->
+
+    <!--绑定手机页面文字-->
+    <string name="bind_phone">绑定</string>
+    <string name="bind_phone_title">绑定手机</string>
+    <!--绑定手机页面文字-->
+
+    <!--忘记密码页面-->
+    <string name="forget_next">下一步</string>
+    <string name="forget_psd_hint">设置新密码6-12位数字或字母</string>
+    <string name="forget_psd_two_hint">再次确认密码</string>
+    <!--忘记密码页面-->
+    
+    <!--设置页面的文字-->
+    <string name="setting_about">关于喜扣</string>
+    <string name="setting_clear">清理缓存</string>
+    <string name="setting_protocol">我的协议</string>
+    <string name="setting_version">版本</string>
+    <string name="setting_message">消息通知</string>
+    <!--设置页面的文字-->
+
+    <!--用户协议页面文字-->
+    <string name="protocol_sell">寄卖协议</string>
+    <string name="protocol_user">用户服务协议</string>
+    <!--用户协议页面文字-->
+
+    <!--关于页面文字-->
+    <string name="about_title">关于喜扣</string>
+    <string name="about_text"> \t\t\t\t“喜扣商城”是中国喜扣控股集团（香港）拟在湖南长沙全资成立陆陆网络科技有限公司（外资企业），商城与众多全球轻奢品牌厂商和品牌商合作（DIOR（迪奥）、SWAROVSKI（施华洛世奇）、Zwilling（双立人）、COACH（蔻驰）、Burberry（博柏利）.........），以定制消费为核心，精选全球高品质正品和轻奢品牌，打造集个性定制消费+电商+店商于一体的新零售商业平台。
+        \n \t\t\t\t该平台构建“互联网+实体经济”的大商业营销模式，与合作伙伴共同打造分布式商业生态环境、助推实体企业健康发展。通过“产品供应链、互联网技术供应链、商业营销供应链”三大核心优势资源，实现喜扣商城“让定制成为消费主流”的愿景，秉承“个性定制，标准智造”为使命，践行“共识、共鸣、共振、共赢”的价值观，致力于让消费者、商家、供应商，让所有参与者，都享有成长获益的机会。以定制提升人们生活个性追求、以定制实现人们品质生活，改变人民的生活态度和生活方式；积极打造全球”高端定制个性化，物超所值不高价”的消费体验，成为定制新零售风口引领者。</string>
+    <string name="about_xikou">喜扣商城版权所有</string>
+    <string name="about_copy_right">copyright@2018-2019 xikou Ail Right Reserved</string>
+    <!--关于页面文字-->
+    
+    <!--我的收货地址页面文字-->
+    <string name="address_add">添加收货地址</string>
+    <string name="address_editor_save">保存并使用</string>
+    <string name="address_name_hint">姓名</string>
+    <string name="address_phone_hint">手机号码</string>
+    <string name="address_choose_hint">选择地址</string>
+    <string name="address_detail_hint">详细地址，如街道、楼牌号等</string>
+    <string name="address_set_default">设置为默认购物收货地址</string>
+    <string name="address_default">默认</string>
+    <!--我的收货地址页面文字-->
+    
+    <!--我的页面文字-->
+    <string name="me_vip_desc">开通独享会员4大权益</string>
+    <string name="me_become_vip">成为会员></string>
+    <string name="me_red_bag">我的钱包</string>
+    <string name="me_coupon">我的优惠券</string>
+    <string name="me_tip">点击登录/注册</string>
+    <string name="me_welcome">上喜扣 喜欢购 享折扣！</string>
+    <!--我的页面文字-->
+    
+    <!--个人信息页面文字-->
+    <string name="info_head_icon">头像</string>
+    <string name="info_vip">喜扣会员</string>
+    <string name="info_id">用户ID</string>
+    <string name="info_name">昵称</string>
+    <string name="info_sex">性别</string>
+    <string name="info_choose_sex">请选择</string>
+    <string name="info_phone">手机号</string>
+    <string name="info_commend">推荐人信息</string>
+    <string name="info_wechat">微信号</string>
+    <string name="info_not_binding">未绑定</string>
+    <string name="info_address">地址管理</string>
+    <string name="info_no_address">无</string>
+    <string name="info_save">保存</string>
+    <!--个人信息页面文字-->
+
+    <!--我的关注页面文字-->
+    <string name="attention_cancel">取消关注</string>
+
+    <!--修改昵称页面文字-->
+    <string name="enter_name_hint">修改昵称</string>
+    <!--修改昵称页面文字-->
+    
+    <!--我的红包页面文字-->
+    <string name="red_bag_tip">余额(元)</string>
+    <string name="red_bag_cash">去提现</string>
+    <string name="red_bag_cold">审核中:</string>
+    <string name="red_bag_income">待结算收入</string>
+    <string name="red_bag_detail">钱包明细</string>
+    <string name="red_bag_cash_detail">提现明细</string>
+    <string name="red_bag_pay_psd">支付密码修改</string>
+    <string name="red_bag_bind_card">提现账号绑定</string>
+    <!--我的红包页面文字-->
+
+    <!--我的优惠券页面文字-->
+    <string name="coupon_money_tip">/优惠券</string>
+    <string name="coupon_detail">明细</string>
+    <string name="coupon_lost">已失效</string>
+    <string name="coupon_range">试用范围:全球买手</string>
+    <string name="coupon_detail_title">我的优惠券明细</string>
+    <string name="coupon_used_tip">使用记录</string>
+    <!--我的优惠券页面文字-->
+
+    <!--店铺主页文字-->
+    <string name="shop_time">营业时间</string>
+    <string name="shop_service_list">特色服务</string>
+    <string name="shop_introduce">商家介绍</string>
+    <string name="shop_show_img">店铺展示</string>
+    <string name="shop_contact">联系商家</string>
+    <!--店铺主页文字-->
+
+    <!--店铺收银台页面文字-->
+    <string name="shop_pay_money">消费金额</string>
+    <string name="shop_pay_not_discount">不参与优惠的金额</string>
+    <string name="shop_coupon">优惠券</string>
+    <string name="shop_real_pay">实际支付金额</string>
+    <string name="shop_money_tip">请咨询商家买单金额</string>
+    <string name="shop_enter_money">请输入金额</string>
+    <string name="shop_coupon_hint">不参与优惠金额+买单优惠后金额</string>
+    <string name="shop_real_pay_hint">当前可用优惠劵</string>
+    <string name="shop_pay_sure">确认买单</string>
+    <string name="shop_coupon_tip">提示说明</string>
+    <string name="shop_coupon_tip_str">1、当全额订单使用优惠劵时，可以享受商家设定的最大优惠比例 \n2、通过调节不享受优惠的金额，可以调节优惠券的最佳使用额度</string>
+    <!--店铺收银台页面文字-->
+
+    <!--设计师圈页面文字-->
+    <string name="designer_circle_xikou">喜扣·定制未来</string>
+    <string name="designer_circle_xikou_en">SET THE FUTURE</string>
+    <string name="designer_circle_tip">定个性  制趋势</string>
+    <string name="designer_circle_right_left">XI BUCKLE CUSTOM</string>
+    <string name="designer_circle_designer">DESIGNER</string>
+    <!--设计师圈页面文字-->
+
+    <!--全球买手页面文字-->
+    <string name="global_buyer_no_coupon">您还没有优惠券或者优惠券额度不够\n前往吾G购-购物即获得双倍券</string>
+    <string name="global_buyer_go">去看看</string>
+    <!--全球买手页面文字-->
+
+    <!--我的消息页面字符-->
+    <string name="message_detail">查看详情</string>
+    <!--我的消息页面字符-->
+
+    <string name="wug_goods_detail">吾G商品详情</string>
+    <string name="wug_goods_buy">吾G购</string>
+    <string name="home_message">首页消息</string>
+    <string name="home_xkz">喜扣赚</string>
+    <string name="search">Home搜索</string>
+    <string name="search_result">搜索结果</string>
+    <!--人民币字符-->
+    <string name="money">¥</string>
+    <!--人民币字符-->
+
+    <!--喜立得订单-->
+    <string name="cut_order_title">喜立得订单</string>
+    <string name="cut_order_detail">喜立得订单详情</string>
+    <!--喜立得订单-->
+    <string name="wug_xiadan">吾G下单</string>
+    <string name="global_xiadan_coupon">抵扣优惠券</string>
+    <string name="wug_xiadan_coupon">赠优惠券</string>
+    <string name="wug_xiadan_postage">配送方式</string>
+    <string name="wug_xiadan_remarks">订单备注</string>
+    <string name="wug_xiadan_pay_other_name">请合伙人代付</string>
+    <string name="wug_xiadan_pay_other_name_two">请喜扣好友代付</string>
+    <string name="wug_xiadan_pay_other_tip">注意:目前支持推荐人代付</string>
+    <string name="wug_xiadan_sum_money">合计金额:</string>
+    <string name="wug_xiadan_sure_order">确认订单</string>
+    <string name="wug_xiadan_add_address">请添加收货地址</string>
+
+    <string name="pay_order">支付订单</string>
+    <string name="pay_result">支付结果</string>
+    <string name="set_pay_pwd">修改支付密码</string>
+    <string name="oto_lianm">O2O联盟</string>
+    <string name="xikou_sucai">喜扣素材</string>
+    <string name="wug_order_title">吾G购订单</string>
+    <string name="fight_group_order_title">拼团订单</string>
+    <string name="zero_order_title">0元抢订单</string>
+    <string name="global_buyer_order_title">全球买手订单</string>
+    <string name="my_order">我的订单</string>
+    <string name="shejiao">社区流量</string>
+    <string name="with_draw">提现</string>
+    <string name="red_detail">钱包明细</string>
+    <string name="many_buy_order_title">多买多折订单</string>
+    <string name="with_draw_account">提现账号</string>
+    <string name="select_add_account_type">选择添加账号类型</string>
+    <string name="real_name">实名认证</string>
+    <string name="red_detailing">钱包明细详情</string>
+    <string name="settlement">待结算中明细</string>
+    <string name="settlement_detail">待结算中明细详情</string>
+    <string name="with_draw_detail">提现明细</string>
+    <string name="with_draw_detailing">提现明细详情</string>
+    <string name="transaction_order">交易明细</string>
+    <string name="add_bank_card">添加银行卡</string>
+    <string name="group_xiadan">定制拼团商品下单</string>
+    <string name="my_promotion">我的推广</string>
+
+    <string name="poster_content">喜扣%s精品正在热卖中，好货不等人 快来抢购吧！</string>
+
+    <string name="order_dialog_title">提示</string>
+    <string name="order_dialog_sure_content">确定收到商品了吗？</string>
+    <string name="order_dialog_cancel_content">确定取消订单吗？</string>
+    <string name="order_dialog_delete_content">确定删除订单吗？</string>
+    <string name="order_dialog_ship_content">确定延长收货时间？</string>
+
+    <string name="sell_dialog_wug_tips">将商品寄卖到吾G商城，不选择此项，商品不会出现在吾G商城哦！</string>
+    <string name="sell_dialog_share_tips">将购买链接发送给微信好友、微信群，或分享到朋友圈，让好友购买。</string>
+    <string name="share_dialog_tips">已寄卖到吾G商城，您可在吾G中找到您的商品了。</string>
+
+    <string name="with_draw_rule">提现规则：最低提现金额%s元，最高%s元，提现金额超过%s元，%d小时内到账。</string>
+    <string name="cut_rule_content">喜立得是公司扶持板块，发起商品砍价活动，邀请好友助力，达到助力人数%d人，在%d小时内砍到底价，即可购买获取底价商品。\n1. 发起人成功购买后，助力好友可得一个随机现金红包；\n2. 助力好友需注册喜扣商城会员，非喜扣会员无法领取砍价红包；\n3. 现金红包直接划入用户钱包，可在平台直接抵扣购买商品金额或者提现。
+</string>
+    <string name="address_out_range">地址超出配送范围，请重新选择</string>
+    <string name="more_goods_click">点击查看更多商品</string>
+
+    <string name="notice_content">\t\t\t\t亲爱的喜扣用户，感谢大家在喜扣商城内测期间对喜扣的支持和建议。为了给各位提供更好的使用体验，优化内测版本，喜扣商城将于2019年12月14日至2020年1月5日停服升级。\n
+\t\t\t\t喜扣商城2.0（公测版本）将于2020年1月6日上线，敬请期待。</string>
+    <string name="material_tips">截图说明：\n 1.截图请包含分享人、分享时间；\n2.请于每日分享最新内容，并于当天提交截图；\n3.工作人员将在1-3个工作日内完成审核；\n4.审核通过后，您将获得任务值奖励。</string>
+</resources>

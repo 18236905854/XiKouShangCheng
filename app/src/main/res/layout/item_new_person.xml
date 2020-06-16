@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_home_cardview"
+    android:layout_height="wrap_content"
+    >
+    <!--android:background="?android:attr/selectableItemBackground"-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/rl_wu_goods_logo"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_wug_goods"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_loading"
+            app:riv_corner_radius_top_left="7dp"
+            app:riv_corner_radius_top_right="7dp" />
+
+        <ImageView
+            android:id="@+id/iv_goods_empty"
+            android:layout_width="60dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_goods_empty"
+            android:layout_centerInParent="true"
+            android:layout_height="60dp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_goodsName"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/rl_wu_goods_logo"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        tools:text="伊芙丽裙子女2019中长款高腰 a字裙韩版修身黄色v领阿萨德 傻傻的阿达撒打算连衣..."
+        android:textColor="#444444"
+        android:textSize="@dimen/text_12sp" />
+
+
+    <!--券-->
+    <LinearLayout
+        android:id="@+id/ll_hot"
+        android:layout_below="@+id/tv_goodsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_hot_sale_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_hot_sale_num"
+            android:paddingLeft="3dp"
+            android:paddingTop="1dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="1dp"
+            android:text="新人专享价"
+            android:textColor="#F94119"
+            android:textSize="9sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_hot"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="13dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/money"
+            android:layout_gravity="bottom"
+            android:textColor="#F94119"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_sale_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="222"
+            android:layout_gravity="bottom"
+            android:textStyle="bold"
+            android:textColor="#F94119"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_line_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="¥333"
+            android:layout_gravity="bottom"
+            android:textColor="#CCCCCC"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0.5dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="7dp"
+        android:layout_toRightOf="@+id/ll"
+        android:background="@color/line"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

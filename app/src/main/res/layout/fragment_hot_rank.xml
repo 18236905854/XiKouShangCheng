@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xk.mall.view.widget.CustomHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.kennyc.view.MultiStateView
+        android:id="@+id/multiImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_animateViewChanges="true"
+        app:msv_emptyView="@layout/empty_list_view"
+        app:msv_errorView="@layout/empty_request_error"
+        app:msv_loadingView="@layout/loading_view"
+        app:msv_viewState="content">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F4F4F4"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="205dp"
+                    android:scaleType="centerCrop" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycleView"
+                    android:layout_marginTop="-84dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.kennyc.view.MultiStateView>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+

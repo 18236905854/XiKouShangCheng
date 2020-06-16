@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/base_tool_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#F4F4F4"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_above="@id/rl_bottom"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:layout_height="65dp">
+
+            <LinearLayout
+                android:id="@+id/ll_many_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:layout_marginLeft="22dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="合计金额:"
+                    android:textColor="#ff444444"
+                    android:textSize="12sp"
+                    />
+                <TextView
+                    android:layout_marginLeft="7dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="#fff94119"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_total_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="399"
+                    android:textColor="#fff94119"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_confirm_order"
+                android:text="确认订单"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:stateListAnimator="@null"
+                android:background="@drawable/bg_wugdetail_buy"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_toRightOf="@id/ll_many_total"
+                android:layout_width="wrap_content"
+                android:maxWidth="170dp"
+                android:layout_height="43dp" />
+
+        </RelativeLayout>
+        <View
+            android:layout_above="@id/rl_bottom"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="0.5dp"
+            android:elevation="0.5dp"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

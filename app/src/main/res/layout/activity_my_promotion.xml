@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/base_tool_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_share_page"
+            android:layout_width="match_parent"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="38dp"
+            android:layout_above="@id/iv_promotion_bottom"
+            android:layout_marginBottom="31dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/my_promotion_bg" />
+
+            <ImageView
+                android:id="@+id/iv_promotion_top"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:src="@drawable/my_promotion_top"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="43dp"
+                android:layout_height="152dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_below="@id/iv_promotion_top"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_promotion_bottom"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/my_promotion_bottom"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginBottom="26dp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="250dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_user_info"
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_user_code"
+                            android:layout_width="wrap_content"
+                            android:text="邀请码"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/color_text"
+                            android:textStyle="bold"
+                            android:textSize="17sp"
+                            android:layout_height="wrap_content" />
+
+                        <com.xk.mall.view.widget.NoPaddingTextView
+                            android:id="@+id/tv_user_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_user_code"
+                            tools:text="W7AHNH"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+                            android:textColor="#EF421C"
+                            android:textSize="45sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_name"
+                            android:layout_below="@id/tv_user_id"
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/iv_header_logo"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:src="@drawable/me_head_icon" />
+
+                            <TextView
+                                android:id="@+id/tv_nick_name"
+                                android:layout_width="wrap_content"
+                                android:maxEms="5"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/iv_header_logo"
+                                android:textColor="@color/color_text"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="邀请您加入喜扣"
+                                android:textColor="@color/color_text"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/tv_nick_name"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_qr_code"
+                        android:layout_below="@id/rl_user_info"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="83dp"
+                        android:layout_height="83dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/iv_qr_code"
+                        android:layout_marginTop="4dp"
+                        android:text="扫码注册喜扣商城"
+                        android:textSize="8sp"
+                        android:textColor="#CCCCCC"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_promotion_code"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginLeft="26dp"-->
+                <!--android:layout_marginRight="26dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:src="@drawable/my_promotion_bottom"-->
+                <!--android:layout_below="@id/iv_promotion_top"-->
+                <!--android:layout_height="289dp" />-->
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_promotion_bottom"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="38dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_promotion_bottom"
+            android:layout_marginRight="38dp"
+            android:layout_marginBottom="43dp"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+</LinearLayout>
+
+

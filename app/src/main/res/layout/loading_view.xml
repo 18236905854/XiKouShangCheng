@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/iv_header_logo"
+        android:layout_width="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_header_loading"
+        android:layout_height="30dp" />
+
+    <com.xk.mall.view.widget.CircleProgressBar
+        android:id="@+id/pb_header_loading"
+        android:layout_width="40dp"
+        app:cpb_roundedCorner="true"
+        app:cpb_foregroundProgressWidth="8"
+        app:cpb_foregroundProgressColor="#444444"
+        app:cpb_progress="100"
+        app:cpb_backgroundProgressColor="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/tv_loading_text"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="正在加载中..."
+        android:textSize="12sp"
+        android:layout_below="@id/pb_header_loading"
+        android:textColor="@color/color_text"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

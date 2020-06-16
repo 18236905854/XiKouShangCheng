@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#F4F4F4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/many_buy_tool_bar"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/appbar_many"
+            app:elevation="0dp"
+            android:background="#f4f4f4">
+
+            <com.youth.banner.XKBannerMany
+                android:id="@+id/banner_many_buy"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:layout_scrollFlags="scroll"
+                app:indicator_drawable_selected="@drawable/round_rect_select"
+                app:indicator_drawable_unselected="@drawable/round_rect_unselect"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                app:layout_scrollFlags="scroll"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_many_title_one"
+                    android:layout_width="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/color_text"
+                    android:textStyle="bold"
+                    tools:text="今日爆款"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_many_title_child_one"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text_12sp"
+                    tools:text="特殊款项"
+                    android:layout_alignBaseline="@id/tv_many_title_one"
+                    android:textColor="#999999"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@id/tv_many_title_one"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_many_hot"
+                app:layout_scrollFlags="scroll"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                app:layout_scrollFlags="scroll"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_many_title_two"
+                    android:layout_width="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/color_text"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_many_title_child_two"
+                    android:layout_width="wrap_content"
+                    android:textColor="#999999"
+                    android:layout_alignBaseline="@id/tv_many_title_two"
+                    android:layout_marginLeft="7dp"
+                    android:textSize="@dimen/text_12sp"
+                    android:layout_toRightOf="@id/tv_many_title_two"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_many_invite"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                app:layout_scrollFlags="scroll"
+                app:riv_corner_radius="7dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="15dp"
+                android:layout_height="150dp" />
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/tab_many_buy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                app:tl_indicator_color="#E52024"
+                app:tl_indicator_height="2dp"
+                app:tl_textsize="16sp"
+                app:tl_indicator_width_equal_title="true"
+                app:tl_tab_space_equal="true"
+                app:tl_tab_padding="6dp"
+                app:tl_tab_width="80dp"
+                app:tl_textBold="SELECT"
+                app:tl_textSelectColor="#E52024"
+                app:tl_textUnselectColor="#444444" />
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_many_buy"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

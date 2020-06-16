@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_circle_head"
+        android:layout_width="match_parent"
+        android:layout_marginRight="33dp"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="22dp"
+        android:layout_height="375dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_circle_designer"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_18sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_text"
+            android:text="@string/designer_circle_designer"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_circle_designer_name"
+            android:layout_below="@id/tv_circle_designer"
+            android:layout_width="wrap_content"
+            android:text="蔡子慧"
+            android:layout_marginTop="7dp"
+            android:textSize="12sp"
+            android:textColor="@color/color_text"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_plus"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/tv_circle_designer_msg"
+            android:text="1672"
+            android:layout_below="@id/tv_circle_designer_name"
+            android:drawableLeft="@drawable/custom_msg"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_20"
+            android:drawablePadding="4dp"
+            android:textSize="@dimen/text_12sp"
+            android:textColor="#999999"
+            android:layout_marginRight="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_circle_designer_love"
+            android:layout_width="wrap_content"
+            android:text="2568"
+            android:layout_below="@id/tv_circle_designer_name"
+            android:layout_toRightOf="@id/tv_circle_designer_msg"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="20dp"
+            android:drawablePadding="4dp"
+            android:textSize="@dimen/text_12sp"
+            android:textColor="#999999"
+            android:drawableLeft="@drawable/custom_love"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

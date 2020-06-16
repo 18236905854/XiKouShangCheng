@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_tool_bar"/>
+    <include layout="@layout/layout_line"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:layout_height="50dp">
+
+        <EditText
+            android:id="@+id/et_editor_name"
+            android:layout_width="match_parent"
+            android:background="@null"
+            android:layout_above="@id/lineName"
+            android:hint="@string/enter_name_hint"
+            android:textColorHint="#CCCCCC"
+            android:textSize="15sp"
+            android:textColor="@color/color_text"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_editor_name_clear"
+            android:layout_width="28dp"
+            android:src="@drawable/ic_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_5"
+            android:visibility="gone"
+            android:layout_height="28dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#E4E4E4"
+            android:id="@+id/lineName"
+            android:layout_alignParentBottom="true"
+            android:layout_height="0.5dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

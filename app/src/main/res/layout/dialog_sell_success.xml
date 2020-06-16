@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_cha"
+            android:src="@mipmap/ic_dialog_cha"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="#E3E3E3"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="0.4dp"
+            android:layout_height="22dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_near_cardview"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="寄卖成功"
+            android:textColor="@color/color_text"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_16sp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/dp_15"
+            android:background="@color/line"
+            android:layout_height="0.5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="寄卖成功"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/text_13sp"
+            android:textColor="@color/color_text"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:text="您的商品已进入寄卖序列中，请耐心等待..."
+            android:textColor="#9B9B9B"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:stateListAnimator="@null"
+                android:textSize="@dimen/text_14sp"
+                android:textColor="#4A4A4A"
+                android:background="@drawable/bg_sell_success_wug"
+                android:text="去吾G"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_height="42dp" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:stateListAnimator="@null"
+                android:textSize="@dimen/text_14sp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_confrim_operation"
+                android:text="知道了"
+                android:layout_height="42dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

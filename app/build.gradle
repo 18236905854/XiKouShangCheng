@@ -1,0 +1,295 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    defaultConfig {
+        applicationId "com.xk.mall"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi-v7a"
+        }
+        //保留中文和英文国际化支持
+        resConfigs "en", "zh"
+    }
+    signingConfigs {
+        debug {
+            storeFile file('keystore\\release\\luluxk.jks')
+            storePassword 'luluxk2019'
+            keyAlias = 'lulu'
+            keyPassword 'luluxk2019'
+        }
+        release {
+            storeFile file('keystore\\release\\luluxk.jks')
+            storePassword 'luluxk2019'
+            keyAlias = 'lulu'
+            keyPassword 'luluxk2019'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                // apk_渠道名-版本号-版本名称-编译时间.apk
+                def fileName = "app-${buildTime()}.apk"
+                outputFileName = fileName
+            }
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            //混淆规则配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources false
+            zipAlignEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    flavorDimensions "app"
+    productFlavors {
+
+        dev {
+            resValue("string", "app_name", "喜扣商城-dev")
+            buildConfigField "String", "BASE_URL", "\"http://gateway-dev.luluxk.com\""
+            manifestPlaceholders = [PGYER_APPID_VALUE: '6ae12c7bea76efec4d046a524a154d22']
+        }
+        local {
+            resValue("string", "app_name", "喜扣商城-测")
+            buildConfigField "String", "BASE_URL", "\"https://gateway-test.luluxk.com\""
+            manifestPlaceholders = [PGYER_APPID_VALUE: '6ae12c7bea76efec4d046a524a154d22']
+        }
+        product {
+            resValue("string", "app_name", "喜扣商城")
+            buildConfigField "String", "BASE_URL", "\"https://gateway.luluxk.com\""
+            manifestPlaceholders = [PGYER_APPID_VALUE: 'ba8b7f53ea5ced8fda9f9d3e203687c1']
+        }
+
+        pre {
+            resValue("string", "app_name", "喜扣商城")
+            buildConfigField "String", "BASE_URL", "\"https://gateway-pre.luluxk.com\""
+            manifestPlaceholders = [PGYER_APPID_VALUE: 'ba8b7f53ea5ced8fda9f9d3e203687c1']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    //greendao配置
+    greendao {
+        //数据库版本号，升级时修改
+        schemaVersion 3
+        //生成的DAO，DaoMaster和DaoSession的包路径。默认与表实体所在的包路径相同
+        daoPackage 'com.xk.mall.gen'
+        //生成源文件的路径。默认源文件目录是在build目录中的(build/generated/source/greendao)
+        targetGenDir 'src/main/java'
+    }
+}
+
+def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyyy_MM_dd--HH-mm')
+    return formattedDate
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["recyclerview-v7"]
+    implementation rootProject.ext.dependencies["cardview-v7"]
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //网络请求
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["retrofit"]
+    //ConverterFactory的Gson依赖包
+    implementation rootProject.ext.dependencies["retrofit-converter-gson"]
+    //CallAdapterFactory的Rx依赖包
+    implementation rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
+    implementation rootProject.ext.dependencies["rxandroid2"]
+    //日志
+    implementation rootProject.ext.dependencies["logger"]
+    //glide
+    implementation rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    //eventbus
+    implementation rootProject.ext.dependencies["eventbus"]
+    //butterknife
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    //工具类
+    implementation rootProject.ext.dependencies["utilcode"]
+    //数据库
+    implementation rootProject.ext.dependencies["greendao"]
+    //greendao升级库
+    implementation rootProject.ext.dependencies["GreenDaoUpgradeHelper"]
+    //base-rvadapter
+    implementation rootProject.ext.dependencies["base-rvadapter"]
+    implementation 'com.zhy:base-adapter:3.0.3'
+    //权限请求库
+    implementation rootProject.ext.dependencies["easypermissions"]
+    //友盟SDK基础库
+    implementation rootProject.ext.dependencies["umcommon"]
+    //友盟统计
+    implementation rootProject.ext.dependencies["umanalytics"]
+    //友盟推送SDK
+    implementation rootProject.ext.dependencies["um-utdid"]
+    implementation rootProject.ext.dependencies["um-push"]
+
+    //小米Push通道
+    implementation 'com.umeng.umsdk:xiaomi-push:3.6.17'
+    implementation 'com.umeng.umsdk:xiaomi-umengaccs:1.1.0'
+
+    //Oppo Push通道
+    implementation 'com.umeng.umsdk:oppo-push:1.0.1'
+    implementation 'com.umeng.umsdk:oppo-umengaccs:1.0.3'
+
+    //魅族Push通道
+    implementation 'com.umeng.umsdk:meizu-push:3.8.1'
+    implementation 'com.umeng.umsdk:meizu-umengaccs:1.0.6'
+
+    //banner
+    implementation project(path: ':banner')
+    //circlerImageView
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    //dialog
+//    implementation project(path: ':dialog')
+//    implementation 'com.kongzue.dialog_v3:dialog:3.1.6'
+    //友盟分享的jar
+    implementation files('libs/umeng-share-core-6.9.4.jar')
+    implementation project(path: ':FlycoTabLayout_Lib')
+    implementation project(path: ':libbrower')
+    //屏幕适配
+    implementation 'me.jessyan:autosize:1.1.2'
+    //动画
+    implementation 'com.nineoldandroids:library:2.4.0'
+    //美洽客服
+//    implementation 'com.meiqia:meiqiasdk:3.5.3@aar'
+    implementation project(path: ':meiqiasdk')
+    //高德地图
+    implementation files('libs/AMap_Location_V4.6.0_20190423.jar')
+    //城市选择器
+    implementation project(path: ':citypickerview')
+    //下拉刷新和上拉加载
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    //不同布局切换
+    implementation 'com.github.Bakumon:StatusLayoutManager:1.0.4'
+    implementation 'com.github.Kennyc1012:MultiStateView:1.3.2'
+    //可展开收起的textView
+    implementation 'com.jaydenxiao:ExpandableTextView:1.0.0'
+//    //阿里云图片上传
+//    implementation 'com.aliyun.dpa:oss-android-sdk:+'
+    //微信登录原生sdk
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    //沉浸式
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0-beta05'
+    //倒计时view
+    implementation 'com.github.iwgang:countdownview:2.1.6'
+    //标签
+    implementation 'com.github.donkingliang:LabelsView:1.5.0'
+    //滑动返回
+    implementation 'cn.bingoogolapple:bga-swipebacklayout:1.2.0@aar'
+    //矩形带圆角图片
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //查看大图
+    implementation 'com.github.SherlockGougou:BigImageViewPager:v4_4.0.3'
+    //年月 选择器
+    implementation 'com.github.addappcn:android-pickers:1.0.3'
+    //图片裁剪
+    implementation 'com.cysion:ImagePicker:1.0.8'
+    //消息数
+    implementation 'q.rorbin:badgeview:1.1.3'
+    //扫一扫
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.6'
+    //aspect
+    implementation 'org.aspectj:aspectjrt:1.9.4'
+    implementation files('libs/AMap2DMap_5.2.0_AMapSearch_6.9.0_20190530.jar')
+    implementation 'com.pgyersdk:sdk:3.0.5'
+    // 支付宝 SDK AAR 包所需的配置
+    implementation (name: 'alipaySdk-15.6.4-20190611174359-noUtdid', ext: 'aar')
+    implementation 'com.pingxx:pingpp-android:2.3.4' // (Ping++ 标准版 SDK) 必须添加
+    //侧滑
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    //leakcanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-beta-3'
+//    //画廊效果banner
+//    implementation 'com.ms:Banner:2.3.20'
+//    implementation project(path: ':LibBanner')
+
+}
+
+import org.aspectj.bridge.IMessage
+import org.aspectj.bridge.MessageHandler
+import org.aspectj.tools.ajc.Main
+
+final def log = project.logger
+final def variants = project.android.applicationVariants
+
+
+//在构建工程时，执行编辑
+variants.all { variant ->
+//    if (!variant.buildType.isDebuggable()) {
+//        log.debug("Skipping non-debuggable build type '${variant.buildType.name}'.")
+//        return;
+//    }
+
+    JavaCompile javaCompile = variant.javaCompile
+    javaCompile.doLast {
+        String[] args = ["-showWeaveInfo",
+                         "-1.9",
+                         "-inpath", javaCompile.destinationDir.toString(),
+                         "-aspectpath", javaCompile.classpath.asPath,
+                         "-d", javaCompile.destinationDir.toString(),
+                         "-classpath", javaCompile.classpath.asPath,
+                         "-bootclasspath", project.android.bootClasspath.join(File.pathSeparator)]
+        log.debug "ajc args: " + Arrays.toString(args)
+
+        MessageHandler handler = new MessageHandler(true);
+        new Main().run(args, handler);
+        for (IMessage message : handler.getMessages(null, true)) {
+            switch (message.getKind()) {
+                case IMessage.ABORT:
+                case IMessage.ERROR:
+                case IMessage.FAIL:
+                    log.error message.message, message.thrown
+                    break;
+                case IMessage.WARNING:
+                    log.warn message.message, message.thrown
+                    break;
+                case IMessage.INFO:
+                    log.info message.message, message.thrown
+                    break;
+                case IMessage.DEBUG:
+                    log.debug message.message, message.thrown
+                    break;
+            }
+        }
+    }
+}

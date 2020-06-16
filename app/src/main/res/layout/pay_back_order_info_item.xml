@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_order_info_item_key"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+        android:layout_centerVertical="true"
+        tools:text="退款原因"
+        android:textColor="#999999"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_order_info_item_value"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/tv_order_info_item_key"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:layout_marginLeft="4dp"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

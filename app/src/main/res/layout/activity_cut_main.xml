@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/order_list_tool_bar"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xk.mall.view.widget.CustomHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:background="#f4f4f4"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner_cut"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:layout_scrollFlags="scroll"
+                    app:indicator_drawable_selected="@drawable/circle_select"
+                    app:indicator_drawable_unselected="@drawable/circle_unselect"/>
+
+                    <TextView
+                        android:id="@+id/tv_cut_new"
+                        android:layout_width="wrap_content"
+                        android:text="最新上架"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_scrollFlags="scroll"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:textColor="@color/color_text"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_cut_new"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_15"
+                        app:layout_scrollFlags="scroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cut_invite"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        app:layout_scrollFlags="scroll"
+                        android:layout_marginTop="15dp"
+                        app:riv_corner_radius="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:src="@drawable/global_buyer_new"
+                        android:layout_height="100dp" />
+
+                    <TextView
+                        android:id="@+id/tv_cut_recommend"
+                        android:layout_width="wrap_content"
+                        android:text="为您推荐"
+                        android:textSize="17sp"
+                        app:layout_scrollFlags="scroll"
+                        android:textStyle="bold"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:textColor="@color/color_text"
+                        android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_cut_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

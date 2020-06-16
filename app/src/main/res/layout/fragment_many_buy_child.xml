@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kennyc.view.MultiStateView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/multi_view_many"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:msv_animateViewChanges="true"
+    app:msv_emptyView="@layout/empty_list_view"
+    app:msv_errorView="@layout/error_view"
+    app:msv_loadingView="@layout/loading_view"
+    app:msv_viewState="content">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_many"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f4"
+        >
+
+        <!--<android.support.v4.widget.NestedScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical">-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_many_buy_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never" />
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="15dp"/>-->
+
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v4.widget.NestedScrollView>-->
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</com.kennyc.view.MultiStateView>

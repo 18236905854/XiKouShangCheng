@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/dp_20"
+    android:paddingRight="@dimen/dp_20"
+    android:background="@color/colorWhite"
+    android:layout_height="60dp">
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_width="36dp"
+        android:id="@+id/iv_cut_logo"
+        android:layout_height="36dp" />
+
+    <TextView
+        android:id="@+id/tv_cut_sku"
+        android:textColor="@color/color_text"
+        android:textSize="@dimen/text_12sp"
+        android:layout_toLeftOf="@id/ll_cut_time"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginRight="6dp"
+        android:layout_toRightOf="@id/iv_cut_logo"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_cut_time"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@id/tv_cut_go_continue"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="剩余 "
+            android:textSize="@dimen/text_12sp"
+            android:textColor="@color/color_text"
+            android:layout_height="wrap_content" />
+
+        <cn.iwgang.countdownview.CountdownView
+            android:id="@+id/count_down_cut_list"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            app:isConvertDaysToHours="true"
+            app:suffixGravity="center"
+            app:isShowHour="true"
+            app:isShowMinute="true"
+            app:isShowSecond="true"
+            app:isShowMillisecond="false"
+            app:suffixHour=":"
+            app:suffixMinute=":"
+            app:suffixTextColor="@color/color_text"
+            app:suffixTextSize="@dimen/text_12sp"
+            app:timeTextColor="@color/color_text"
+            app:timeTextSize="@dimen/text_12sp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_cut_go_continue"
+        android:layout_width="wrap_content"
+        android:text="继续砍价"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/bg_many_share_money"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

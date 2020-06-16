@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+        <ImageView android:layout_width="24dp"
+            android:id="@+id/iv_user_vip_item_icon"
+            android:src="@drawable/me_vip_two"
+            android:layout_marginTop="12dp"
+            android:layout_height="24dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:id="@+id/tv_user_vip_item_name"
+            android:textColor="#444444"
+            android:textSize="12sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

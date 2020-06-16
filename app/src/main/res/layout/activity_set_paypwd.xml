@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include
+            layout="@layout/base_tool_bar"
+           />
+
+
+   <LinearLayout
+       android:layout_marginTop="50dp"
+       android:layout_marginLeft="40dp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="重置支付密码账号:"
+           android:textColor="#ff999999"
+           android:textSize="16sp"
+           />
+       <TextView
+           android:id="@+id/tv_phone"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text=""
+           android:textColor="#ff999999"
+           android:textSize="16sp"
+           />
+
+   </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_height="60dp">
+
+        <EditText
+            android:id="@+id/et_code"
+            android:hint="@string/register_code_hint"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textSize="15sp"
+            android:textColorHint="#CCCCCC"
+            android:layout_above="@id/lineTwo"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btn_register_code"
+            android:layout_width="wrap_content"
+            android:text="@string/login_get_code"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_centerVertical="true"
+            android:textColor="#BB9445"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_login_get_code"
+            android:layout_height="25dp" />
+
+        <View
+            android:id="@+id/lineTwo"
+            android:layout_width="match_parent"
+            android:background="#E4E4E4"
+            android:layout_alignParentBottom="true"
+            android:layout_height="0.5dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:enabled="false"
+        android:stateListAnimator="@null"
+        android:text="下一步"
+        android:textSize="@dimen/text_16sp"
+        android:background="@drawable/bg_register_btn_selector"
+        android:textColor="@color/colorWhite"
+        android:layout_height="40dp" />
+
+</LinearLayout>

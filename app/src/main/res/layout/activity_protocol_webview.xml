@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_tool_bar"/>
+    <include layout="@layout/layout_line"/>
+
+        <com.library.libbrower.X5WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/ll_protocol_bottom"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:elevation="0.5dp"
+            android:layout_height="60dp">
+            
+            <CheckBox
+                android:id="@+id/cb_protocol"
+                android:layout_width="18dp"
+                android:layout_marginLeft="25dp"
+                android:layout_gravity="center_vertical"
+                android:button="@drawable/bg_cb"
+                android:layout_height="18dp" />
+
+            <TextView
+                android:id="@+id/tv_protocol_content"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/text_14sp"
+                android:text="22222222"
+                android:textColor="@color/color_text"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:layout_height="wrap_content" />
+            
+        </LinearLayout>
+
+
+</LinearLayout>

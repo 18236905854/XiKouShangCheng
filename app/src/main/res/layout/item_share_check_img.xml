@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.makeramen.roundedimageview.RoundedImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:riv_corner_radius="2dp"
+    android:scaleType="centerCrop"
+    android:layout_marginRight="@dimen/dp_10"
+    android:id="@+id/iv_share_check_img"
+    android:layout_height="60dp">
+
+</com.makeramen.roundedimageview.RoundedImageView>

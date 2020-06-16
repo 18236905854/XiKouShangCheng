@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#444444</color>
+    <!--透明颜色-->
+    <color name="empty">#00000000</color>
+    <color name="black">#000</color>
+    <color name="dialogButtonIOSLightPress">#0f000000</color>
+
+    <!--主题颜色-->
+    <!--我的页面的头部颜色-->
+    <color name="colorMe">#444444</color>
+    <!--背景 纯白色-->
+    <color name="colorWhite">#ffffff</color>
+    <!--页面标题的文字颜色-->
+    <color name="color_title">#444444</color>
+    <!--首页Tab选中的文字的颜色-->
+    <color name="color_tab_select">#666666</color>
+    <!--首页Tab未选中的文字的颜色-->
+    <color name="color_tab_unselect">#999999</color>
+
+    <!--大部分页面黑色字体颜色-->
+    <color name="color_text">#444444</color>
+    <color name="color_golden">#BB9445</color>
+
+    <color name="price">#EF421C</color>
+    <color name="line">#E4E4E4</color>
+    <color name="detail_price">#F94119</color>
+    <color name="line_price">#CCCCCC</color>
+
+    <!--全球买手标题栏颜色-->
+    <color name="color_red">#D43030</color>
+    <!--全球买手专场分类标题字体颜色-->
+    <color name="color_category">#E52024</color>
+    <color name="color_coupons">#89572B</color>
+    <color name="color_price">#F94119</color>
+    <!--sku-->
+    <color name="comm_line">#ffffff</color>
+    <color name="sku_name">#999999</color>
+    <color name="bg_color">#F4F4F4</color>
+    <!--end-->
+    <color name="green">#00FA9A</color>
+
+</resources>

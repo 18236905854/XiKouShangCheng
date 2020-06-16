@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#F4F4F4"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_tool_bar"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.xk.mall.view.widget.CustomHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    app:elevation="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_new_person_head"
+                        android:layout_width="match_parent"
+                        app:layout_scrollFlags="scroll"
+                        android:layout_height="384dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent"
+                        android:focusable="true"
+                        android:background="#F4F4F4"
+                        app:layout_scrollFlags="scroll"
+                        android:layout_gravity="center_horizontal"
+                        android:focusableInTouchMode="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:src="@drawable/ic_new_person_banner"
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="1元商品可任选一件带走"
+                                android:layout_marginTop="7dp"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="@dimen/text_12sp"
+                                android:textColor="#999999"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.design.widget.AppBarLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_new_person"
+                    android:layout_marginTop="20dp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </android.support.design.widget.CoordinatorLayout>
+
+            <Button
+                android:id="@+id/btn_vip"
+                android:textSize="@dimen/text_14sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:layout_marginBottom="49dp"
+                android:layout_marginLeft="33dp"
+                android:layout_marginRight="33dp"
+                android:background="@drawable/bg_new_person_vip"
+                android:text="即刻领取会员权益"
+                android:layout_alignParentBottom="true"
+                android:layout_height="40dp" />
+
+        </RelativeLayout>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

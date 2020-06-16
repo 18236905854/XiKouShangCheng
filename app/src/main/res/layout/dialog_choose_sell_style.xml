@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_cha"
+            android:src="@mipmap/ic_dialog_cha"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="#E3E3E3"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="0.4dp"
+            android:layout_height="22dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_near_cardview"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="请选择寄卖方式"
+            android:layout_marginTop="@dimen/dp_15"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_text"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/dp_15"
+            android:background="@color/line"
+            android:layout_height="0.5dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_choose_sell"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            
+            <CheckBox
+                android:id="@+id/cb_choose_wug"
+                android:layout_width="18dp"
+                android:button="@drawable/bg_cb"
+                android:layout_height="18dp" />
+
+            <TextView
+                android:id="@+id/tv_choose_sell"
+                android:layout_width="wrap_content"
+                android:text="寄卖到吾G商城"
+                android:textSize="@dimen/text_13sp"
+                android:textColor="@color/color_text"
+                android:layout_toRightOf="@id/cb_choose_wug"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@id/cb_choose_wug"
+                android:layout_toRightOf="@id/cb_choose_wug"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="3dp"
+                android:textSize="10sp"
+                android:text="@string/sell_dialog_wug_tips"
+                android:textColor="#9B9B9B"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_choose_share"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/cb_choose_share"
+                android:layout_width="18dp"
+                android:button="@drawable/bg_cb"
+                android:layout_height="18dp" />
+
+            <TextView
+                android:id="@+id/tv_choose_share"
+                android:layout_width="wrap_content"
+                android:text="分享给好友购买"
+                android:textSize="@dimen/text_13sp"
+                android:textColor="@color/color_text"
+                android:layout_toRightOf="@id/cb_choose_share"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_share_tip"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/cb_choose_share"
+                android:layout_toRightOf="@id/cb_choose_share"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="3dp"
+                android:textSize="10sp"
+                android:text="@string/sell_dialog_share_tips"
+                android:textColor="#9B9B9B"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_sell_tips"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_toRightOf="@id/cb_choose_share"
+                android:layout_below="@id/tv_share_tip"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:src="@drawable/ic_tips"
+                    android:layout_below="@id/tv_share_tip"
+                    android:layout_height="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#F2641E"
+                    android:textSize="11sp"
+                    android:layout_marginLeft="5dp"
+                    android:text="使用优惠券已超出吾G寄卖限额"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_sell_tip"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tv_share_tip"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textColor="#BB9445"
+                android:textSize="@dimen/text_12sp"
+                android:text="商品寄卖后不能再提货"
+                android:layout_toRightOf="@id/cb_choose_share"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="33dp"
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:stateListAnimator="@null"
+                android:textSize="@dimen/text_14sp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_register_btn_selector"
+                android:text="确定"
+                android:textStyle="bold"
+                android:layout_height="42dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

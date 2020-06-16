@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:textColor="#444444"
+            android:textSize="15sp"
+            android:text="请选择"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:src="@mipmap/ic_sku_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line"/>
+    </RelativeLayout>
+
+   <RelativeLayout
+       android:id="@+id/rl_jishi"
+       android:layout_marginTop="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:background="?attr/selectableItemBackground">
+
+       <TextView
+           android:layout_centerVertical="true"
+           android:layout_marginLeft="20dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="即时到账（手续费6%）"
+           android:textColor="#ff444444"
+           android:textSize="14sp"
+           />
+
+       <CheckBox
+           android:id="@+id/checkbox_jishi"
+           android:layout_width="wrap_content"
+           android:background="@null"
+           android:enabled="false"
+           android:clickable="false"
+           android:checked="true"
+           android:layout_alignParentRight="true"
+           android:layout_centerVertical="true"
+           android:layout_marginRight="20dp"
+           android:button="@drawable/bg_check_box"
+           android:layout_height="wrap_content" />
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="@color/line"
+           android:layout_alignParentBottom="true"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="20dp"/>
+
+   </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_three_day"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/selectableItemBackground">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3个工作日到账（手续费5%）"
+            android:textColor="#ff444444"
+            android:textSize="14sp"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_three"
+            android:layout_width="wrap_content"
+            android:background="@null"
+            android:enabled="false"
+            android:clickable="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:button="@drawable/bg_check_box"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_seven_day"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/selectableItemBackground">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7个工作日到账（手续费4%）"
+            android:textColor="#ff444444"
+            android:textSize="14sp"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_seven"
+            android:layout_width="wrap_content"
+            android:background="@null"
+            android:enabled="false"
+            android:clickable="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:button="@drawable/bg_check_box"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_14sp"
+        android:stateListAnimator="@null"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_login_btn"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="28dp"
+        android:layout_height="40dp" />
+    
+</LinearLayout>

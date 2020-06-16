@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xk.mall">
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--网易云信需要的一些权限-->
+    <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 8.0 系统需要-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- 多媒体相关 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+
+    <application
+        android:name="com.xk.mall.MyApplication"
+        tools:replace="android:allowBackup"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:largeHeap = "true"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="true"
+        android:maxAspectRatio="2.4"
+        android:theme="@style/AppTheme">
+
+        <!-- 全面屏配置 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+
+        <!--屏幕适配配置-->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375"/>
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="667"/>
+
+        <!--刘海屏-->
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true"/>
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+
+        <!--高德地图配置Key-->
+        <meta-data android:name="com.amap.api.v2.apikey"
+            android:value="0f589720aa90b53093822b7a42f9dfa1"/>
+        <service android:name="com.amap.api.location.APSService"/>
+
+        <!-- 蒲公英SDK配置-->
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="${PGYER_APPID_VALUE}" >
+        </meta-data>
+
+        <!--<activity android:name="com.xk.mall.view.activity.SplashActivity"-->
+            <!--android:theme="@style/SplashTheme">-->
+        <!--</activity>-->
+
+        <activity android:name=".view.activity.Splash2Activity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:theme="@style/SplashTheme2"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.MainActivity" android:windowSoftInputMode="adjustPan" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ForgetActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.SettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.AboutActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.AddressActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.EditorAddressActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.PersonalInfoActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="xk"
+                    android:host="user"
+                    android:path="/person"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.MyProtocolActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.CommendInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.EditorNameActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.MyRedBagActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.AttentionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.CouponActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.CouponDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.WebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ShopActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ShopPayActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ShopPayOrderActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.BindPhoneActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.CustomizedActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="xk"
+                    android:host="designer"
+                    android:path="/home"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.CustomizedFilterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.DesignerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.GroupMainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="xk"
+                    android:host="activity"
+                    android:path="/group"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.WorksDetailActivity" android:windowSoftInputMode="adjustResize"
+            android:configChanges="orientation|screenSize" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.DesignerCircleActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.GlobalBuyerActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="xk"
+                    android:host="activity"
+                    android:path="/global"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.GlobalBuyerChildActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.GlobalBuyerGoodsDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.GlobalBuyerXiaDanActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.HotRankingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.MakeTaskActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.WuGMainActivity" android:label="@string/wug_goods_buy" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="xk"
+                    android:host="activity"
+                    android:path="/wug"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.WuGGoodsDetailActivity"  android:screenOrientation="portrait" android:label="@string/wug_goods_detail"/>
+        <activity android:name=".view.activity.HomeMessageActivity"  android:screenOrientation="portrait" android:label="@string/home_message"/>
+        <activity android:name=".view.activity.MessageListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.MessageDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.XiKouZuanActivity" android:screenOrientation="portrait" android:label="@string/home_xkz"/>
+        <activity android:name=".view.activity.HomeSearchActivity" android:screenOrientation="portrait" android:label="@string/search"/>
+        <activity android:name=".view.activity.SearchResultActivity"  android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden" android:label="@string/search_result"/>
+        <activity android:name=".view.activity.ZeroMainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="xk"
+                    android:host="activity"
+                    android:path="/zero"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.ManyBuyActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="xk"
+                    android:host="activity"
+                    android:path="/many"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.ManyBuyOrderListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ManyBuyOrderDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ManyBuyOrderSearchResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ManyGoodsDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ManyGoodsXiaDanActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.CutMainActivity" android:screenOrientation="portrait" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="xk"
+                    android:host="activity"
+                    android:path="/cut"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.CutGoodsDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.CutSuccessActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.WuGGoodsXiaDanActivity" android:screenOrientation="portrait" android:label="@string/wug_xiadan"/>
+        <activity android:name=".view.activity.PayOrderActivity" android:screenOrientation="portrait" android:label="@string/pay_order"/>
+        <activity android:name=".view.activity.CutOrderListActivity" android:screenOrientation="portrait" android:label="@string/cut_order_title"/>
+        <activity android:name=".view.activity.CutOrderDetailActivity" android:screenOrientation="portrait" android:label="@string/cut_order_detail"/>
+        <activity android:name=".view.activity.CutXiaDanActivity" android:screenOrientation="portrait" android:label="@string/cut_order_detail"/>
+        <activity android:name=".view.activity.CutOrderSearchResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ZeroGoodsDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ZeroGivePriceRecordActivity" android:screenOrientation="portrait" />
+        <activity android:name=".view.activity.PayOrderResultActivity" android:screenOrientation="portrait" android:label="@string/pay_result"/>
+        <activity android:name=".view.activity.SetPayPwdOneActivity" android:screenOrientation="portrait"  android:label="@string/set_pay_pwd"/>
+        <activity android:name=".view.activity.SetPayPwdTwoActivity" android:screenOrientation="portrait" android:label="@string/set_pay_pwd"/>
+        <activity android:name=".view.activity.OTOLianMActivity" android:screenOrientation="portrait" android:label="@string/oto_lianm"/>
+        <activity android:name=".view.activity.XiKouMaterialActivity" android:screenOrientation="portrait" android:label="@string/xikou_sucai">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="xk"
+                    android:host="activity"
+                    android:path="/share"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.WuGOrderListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.WuGOrderDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.WuGOrderSearchResultActivity" android:screenOrientation="portrait" />
+        <activity android:name=".view.activity.GroupGoodsDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.GroupOrderListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.GroupOrderDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.GroupOrderSearchResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ZeroOrderListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ZeroOrderDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ZeroOrderSearchResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.GlobalBuyerOrderListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.GlobalBuyerOrderDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.GlobalOrderSearchResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ManyCartActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.WantSellOrderListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.SellOrderListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.WithdrawAccountActivity"  android:screenOrientation="portrait" android:label="@string/with_draw_account"/>
+        <activity android:name=".view.activity.SelectAccountTypeActivity" android:screenOrientation="portrait" android:label="@string/select_add_account_type"/>
+        <activity android:name=".view.activity.RealNameActivity"  android:screenOrientation="portrait" android:label="@string/real_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="xk"
+                    android:host="user"
+                    android:path="/authen"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.RedBagDetailingActivity"  android:screenOrientation="portrait" android:label="@string/red_detailing"/>
+        <activity android:name=".view.activity.SettlementingActivity" android:screenOrientation="portrait" android:label="@string/settlement"/>
+        <activity android:name=".view.activity.SettlementDetailActivity" android:screenOrientation="portrait" android:label="@string/settlement_detail"/>
+        <activity android:name=".view.activity.WithDrawDetailActivity" android:screenOrientation="portrait" android:label="@string/with_draw_detail"/>
+        <activity android:name=".view.activity.WithDrawDetailingActivity"  android:screenOrientation="portrait" android:label="@string/with_draw_detailing"/>
+        <activity android:name=".view.activity.WithDrawResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.MyCommunityFlowActivity" android:screenOrientation="portrait" android:label="@string/shejiao"/>
+        <activity android:name=".view.activity.MyWithdrawActivity" android:screenOrientation="portrait" android:label="@string/with_draw"/>
+        <activity android:name=".view.activity.RedBagDetailActivity" android:screenOrientation="portrait" android:label="@string/red_detail"/>
+        <activity android:name=".view.activity.CutContinueActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.TransactionDetailActivity" android:screenOrientation="portrait" android:label="@string/transaction_order"/>
+        <activity android:name=".view.activity.AddBankCardActivity" android:screenOrientation="portrait" android:label="@string/add_bank_card"/>
+        <activity android:name=".view.activity.OrderFilterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.SellConsignmentActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.OtherPayActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.GroupGoodsXiaDanActivity" android:screenOrientation="portrait" android:label="@string/group_xiadan"/>
+        <activity android:name=".view.activity.ZeroXiaDanActivity" android:screenOrientation="portrait" android:label="@string/with_draw"/>
+        <activity android:name=".view.activity.NearShopSearchActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.NearSearchResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.MyTabLayoutActivity" android:screenOrientation="portrait" />
+        <activity android:name=".view.activity.ProtocolWebViewActivity" android:screenOrientation="portrait" />
+        <activity android:name=".view.activity.MyPromotionActivity" android:screenOrientation="portrait" android:label="@string/my_promotion">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="xk"
+                    android:host="user"
+                    android:path="/promotion"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.ScanActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.PosterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.NewPersonActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.NewProductActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.DPayActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.NewPersonOrderListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.NewPersonOrderDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.NewPersonGoodsDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.SellOrderSearchResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.LogisticsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ChooseBankActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.RemarksActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.SellOrderDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.TransferActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.TransferNextActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.TransferResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.TransferDetailingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.CutOrderResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.SearchFriendActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.MaterialPostActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ShareCheckActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.PayBackListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ReturnsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.PayBackPostActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.PayBackDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.PayBackSellActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.EnterLogisticsInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.TransferCouponActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.TransferCouponNextActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.TransferCouponResultActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name="com.xk.mall.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="wx059b60568a69e0a7"/>
+            </intent-filter>
+        </activity>
+        <!--使用Ping++支付后，取消注册上面的activity，改用下面的activity-->
+<!--        <activity-alias-->
+<!--            android:name="com.xk.mall.wxapi.WXPayEntryActivity"-->
+<!--            android:exported="true"-->
+<!--            android:targetActivity="com.pingplusplus.android.PaymentActivity" />-->
+
+        <activity android:name=".view.activity.MiPushActivity" android:screenOrientation="portrait"/>
+        <!--7.0需要配置fileprovider-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!--魅族push应用定义消息receiver声明 -->
+        <receiver android:name=".view.widget.MeizuTestReceiver">
+            <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
+                <!-- 接收register消息 -->
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />
+                <!-- 接收unregister消息-->
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />
+                <!-- 兼容低版本Flyme3推送服务配置 -->
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
+                <action android:name="com.meizu.c2dm.intent.RECEIVE" />
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+        </receiver>
+
+        <!--第三方分享需要配置的activity-->
+        <!--QQ-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent1109332998" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize" android:screenOrientation="portrait"/>
+        <!--微信-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+        <!--新浪-->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:exported="false"
+            >
+        </activity>
+
+        <activity android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:launchMode="singleTask"
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <!-- 友盟消息监听 使用完全自定义消息来开启应用的服务进程的示例服务配置 -->
+        <service android:name="com.xk.mall.service.UmengNotificationService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name="com.xk.mall.service.MyNotificationService" />
+        <receiver android:name="com.xk.mall.service.NotificationBroadcast" />
+
+        <!--Ping++注册-->
+        <activity
+            android:name="com.pingplusplus.android.PaymentActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+    </application>
+
+</manifest>

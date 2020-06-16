@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        layout="@layout/base_tool_bar"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite">
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tablayout"
+            android:background="#FFFFFF"
+            app:layout_scrollFlags="scroll"
+            android:layout_width="220dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            app:tl_textsize="15sp"
+            app:tl_indicator_color="#444444"
+            app:tl_indicator_height="2dp"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_tab_space_equal="true"
+            app:tl_textBold="SELECT"
+            app:tl_textSelectColor="#444444"
+            app:tl_textUnselectColor="#CCCCCC" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPage"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

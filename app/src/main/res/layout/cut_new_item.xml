@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_cut_new_logo"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="5dp"
+        android:src="@drawable/ic_activity_cut_one"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_cut_new_discount"
+        android:layout_width="wrap_content"
+        android:text="3.7折起"
+        android:alpha="0.6"
+        android:textSize="9sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_cut_discount"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_tool_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_height="60dp">
+
+        <com.xk.mall.view.widget.ClearEditText
+            android:id="@+id/et_bind_phone_phone"
+            android:layout_above="@id/line"
+            android:layout_width="match_parent"
+            android:hint="@string/register_phone_hint"
+            android:gravity="center_vertical"
+            android:textColorHint="#CCCCCC"
+            android:background="@null"
+            android:inputType="numberDecimal"
+            android:layout_height="match_parent" >
+        </com.xk.mall.view.widget.ClearEditText>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/ic_delete"
+            android:padding="6dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_height="30dp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:background="#E4E4E4"
+            android:layout_alignParentBottom="true"
+            android:layout_height="0.5dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_height="60dp">
+
+        <EditText
+            android:id="@+id/et_bind_phone_psd"
+            android:hint="@string/register_code_hint"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:inputType="number"
+            android:textColorHint="#CCCCCC"
+            android:layout_above="@id/lineTwo"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btn_bind_phone_code"
+            android:layout_width="wrap_content"
+            android:text="@string/login_get_code"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_centerVertical="true"
+            android:stateListAnimator="@null"
+            android:textColor="#BB9445"
+            android:textAllCaps="false"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_login_get_code"
+            android:layout_height="25dp" />
+
+        <View
+            android:id="@+id/lineTwo"
+            android:layout_width="match_parent"
+            android:background="#E4E4E4"
+            android:layout_alignParentBottom="true"
+            android:layout_height="0.5dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bind_phone_invitation"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:visibility="gone"
+        android:layout_height="60dp">
+
+        <EditText
+            android:id="@+id/et_bind_phone_invitation"
+            android:layout_above="@id/lineThree"
+            android:layout_width="match_parent"
+            android:hint="@string/register_invitation_code_hint"
+            android:gravity="center_vertical"
+            android:textColorHint="#CCCCCC"
+            android:background="@null"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/ic_delete"
+            android:padding="6dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_height="30dp" />
+
+        <View
+            android:id="@+id/lineThree"
+            android:layout_width="match_parent"
+            android:background="#E4E4E4"
+            android:layout_alignParentBottom="true"
+            android:layout_height="0.5dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_bind"
+        android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:enabled="false"
+        android:stateListAnimator="@null"
+        android:text="@string/bind_phone"
+        android:textSize="@dimen/text_16sp"
+        android:background="@drawable/bg_register_btn_selector"
+        android:textColor="@color/colorWhite"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/order_list_tool_bar"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f4"
+       >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp"
+            android:background="#f4f4f4">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner_zero"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:layout_scrollFlags="scroll"
+                app:indicator_drawable_selected="@drawable/circle_select"
+                app:indicator_drawable_unselected="@drawable/circle_unselect"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_countdown"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layout_scrollFlags="scroll"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:id="@+id/tv_zero_title_one"
+                    android:layout_width="wrap_content"
+                    android:text="倒计时专区"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_text"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_juli_over"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/text_12sp"
+                    android:textColor="#999999"
+                    android:gravity="center"
+                    android:layout_height="55dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_zero_count_down"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="距离结束:"
+                        android:textSize="@dimen/text_12sp"
+                        android:textColor="#999999"
+                        android:layout_toLeftOf="@id/cv_zero_countdown"
+                        android:gravity="center"
+                        android:layout_height="55dp" />
+
+                    <cn.iwgang.countdownview.CountdownView
+                        android:id="@+id/cv_zero_countdown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        app:layout_scrollFlags="scroll"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_horizontal"
+                        app:isHideTimeBackground="false"
+                        app:isShowDay="false"
+                        app:isShowHour="true"
+                        app:isShowMinute="true"
+                        app:isShowSecond="true"
+                        app:isShowTimeBgDivisionLine="false"
+                        app:isTimeTextBold="true"
+                        app:suffixGravity="center"
+                        app:suffixTextColor="#444444"
+                        app:suffixTextSize="@dimen/text_13sp"
+                        app:timeBgColor="#444444"
+                        app:timeBgRadius="10.5dp"
+                        app:timeBgSize="21dp"
+                        app:timeTextColor="#FFFFFF"
+                        app:timeTextSize="13sp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_zero_countdown"
+                android:layout_marginLeft="15dp"
+                app:layout_scrollFlags="scroll"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/iv_zero_invite"
+                android:layout_width="match_parent"
+                app:layout_scrollFlags="scroll"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:scaleType="fitXY"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:id="@+id/tv_zero_title_two"
+                android:layout_width="match_parent"
+                android:textSize="17sp"
+                android:textColor="@color/color_text"
+                android:text="正在热拍"
+                app:layout_scrollFlags="scroll"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="25dp"
+                android:layout_height="wrap_content" />
+
+            <com.flyco.tablayout.SlidingChildTabLayout
+                android:id="@+id/tab_zero"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                app:tl_indicator_color="#444444"
+                app:tl_indicator_height="2dp"
+                app:tl_textsize="16sp"
+                app:tl_indicator_width_equal_title="true"
+                app:tl_textBold="SELECT"
+                app:tl_textSelectColor="#444444"
+                app:tl_textUnselectColor="#CCCCCC" />
+
+        </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPage_zero"
+                android:layout_marginTop="@dimen/dp_15"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_zero_pai"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="13dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:visibility="gone"
+    android:background="@drawable/bg_near_cardview"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_zero_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0元抢"
+                android:textColor="#ff444444"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tv_juli_over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离结束"
+                android:layout_marginLeft="12dp"
+                android:textColor="#999999"
+                android:textSize="10sp"
+                />
+            <cn.iwgang.countdownview.CountdownView
+                android:id="@+id/cv_countdown"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_horizontal"
+                app:isHideTimeBackground="false"
+                app:isShowDay="true"
+                app:isShowHour="true"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:isShowTimeBgDivisionLine="false"
+                app:isTimeTextBold="true"
+                app:suffixGravity="center"
+                app:suffixTextColor="#444444"
+                app:suffixTextSize="@dimen/text_13sp"
+                app:timeBgColor="#444444"
+                app:timeBgRadius="10.5dp"
+                app:timeBgSize="21dp"
+                app:timeTextColor="#FFFFFF"
+                app:timeTextSize="12sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_right"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleview_zero_buy"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150dp"
+        android:overScrollMode="never" />
+</LinearLayout>

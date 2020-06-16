@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_tool_bar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_editor_address_name"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:layout_height="60dp">
+
+            <EditText
+                android:id="@+id/et_editor_address_name"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:textSize="15sp"
+                android:maxLength="10"
+                android:layout_above="@id/lineName"
+                android:hint="@string/address_name_hint"
+                android:textColorHint="#CCCCCC"
+                android:textColor="@color/color_text"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#E4E4E4"
+                android:id="@+id/lineName"
+                android:layout_alignParentBottom="true"
+                android:layout_height="0.5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_editor_address_phone"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/rl_editor_address_name"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:layout_height="60dp">
+
+            <EditText
+                android:id="@+id/et_editor_address_phone"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:layout_above="@id/linePhone"
+                android:inputType="number"
+                android:textSize="15sp"
+                android:maxLength="11"
+                android:hint="@string/address_phone_hint"
+                android:textColorHint="#CCCCCC"
+                android:textColor="@color/color_text"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#E4E4E4"
+                android:id="@+id/linePhone"
+                android:layout_alignParentBottom="true"
+                android:layout_height="0.5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_editor_address_address"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/rl_editor_address_phone"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv_editor_address_address"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:layout_above="@id/lineAddress"
+                android:hint="@string/address_choose_hint"
+                android:textColor="@color/color_text"
+                android:textColorHint="#CCCCCC"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/setting_icon_arrow"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#E4E4E4"
+                android:id="@+id/lineAddress"
+                android:layout_alignParentBottom="true"
+                android:layout_height="0.5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_editor_address_detail"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/rl_editor_address_address"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:layout_height="60dp">
+
+            <EditText
+                android:id="@+id/et_editor_address_detail"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:textSize="15sp"
+                android:maxLength="50"
+                android:textColor="@color/color_text"
+                android:layout_above="@id/lineDetail"
+                android:hint="@string/address_detail_hint"
+                android:textColorHint="#CCCCCC"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#E4E4E4"
+                android:id="@+id/lineDetail"
+                android:layout_alignParentBottom="true"
+                android:layout_height="0.5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_below="@id/rl_editor_address_detail"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/cb_editor_default"
+                android:layout_width="wrap_content"
+                android:button="@drawable/bg_cb"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/cb_editor_default"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:text="@string/address_set_default"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_editor_save"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="@string/address_editor_save"
+            android:layout_marginRight="@dimen/dp_20"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:background="@drawable/bg_add_address_btn"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_14sp"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

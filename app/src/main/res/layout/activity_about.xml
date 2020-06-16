@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_tool_bar"/>
+    <include layout="@layout/layout_line" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/about_logo"
+        android:layout_height="70dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_above="@id/tv_about_copyright"
+            android:layout_marginBottom="41dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_about"
+                android:lineSpacingExtra="8dp"
+                android:text="@string/about_text"
+                android:textSize="@dimen/text_14sp"
+                android:textColor="#666666"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_about_copyright"
+            android:layout_width="wrap_content"
+            android:text="@string/about_xikou"
+            android:layout_above="@id/tv_about_copy"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="6dp"
+            android:textSize="@dimen/text_12sp"
+            android:textColor="#CCCCCC"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_about_copy"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/about_copy_right"
+            android:textSize="10sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#CCCCCC"
+            android:paddingBottom="@dimen/dp_30"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

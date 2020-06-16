@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kennyc.view.MultiStateView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/multi_view_global"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:msv_animateViewChanges="true"
+    app:msv_emptyView="@layout/empty_list_view"
+    app:msv_errorView="@layout/error_view"
+    app:msv_loadingView="@layout/loading_view"
+    app:msv_viewState="content">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_global"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableLoadMore="false"
+        >
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_global_buy_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp_12"
+                    android:overScrollMode="never" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_more_goods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="39dp"
+                    android:background="@drawable/bg_global_more_goods">
+
+                    <TextView
+                        android:id="@+id/tv_more_goods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="57dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="57dp"
+                        android:layout_marginBottom="11dp"
+                        android:text="@string/more_goods_click"
+                        android:textColor="@color/color_category"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+<!--                <RelativeLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="39dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_global_more_goods">
+                <TextView
+                    android:id="@+id/tv_more_goods"
+                    android:layout_width="wrap_content"
+                    android:textSize="12sp"
+                    android:text="@string/more_goods_click"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="57dp"
+                    android:layout_marginRight="57dp"
+                    android:textColor="@color/color_category"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>-->
+
+</com.kennyc.view.MultiStateView>

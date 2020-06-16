@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include
+        layout="@layout/base_tool_bar"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <com.xk.mall.view.widget.ClearEditText
+            android:id="@+id/et_search"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@id/tv_finish"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_home_search_black"
+            android:drawableLeft="@drawable/near_search"
+            android:drawablePadding="8dp"
+            android:layout_centerVertical="true"
+            android:hint="设计师名称，作品名模糊查询"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:textColorHint="#CCCCCC"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_finish"
+            android:text="取消"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:textSize="@dimen/text_14sp"
+            android:textColor="#444444"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="发布时间"
+            android:textColor="#999999"
+            android:textSize="@dimen/text_14sp" />
+
+        <com.donkingliang.labels.LabelsView
+            android:id="@+id/labels_time"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content"
+            app:labelBackground="@drawable/customized_filter_item_selector"
+            app:labelTextColor="@drawable/bg_labels_yewu_text"
+            app:labelTextPaddingTop="11dp"
+            app:labelTextPaddingBottom="11dp"
+            app:labelTextPaddingLeft="10dp"
+            app:labelTextPaddingRight="10dp"
+            app:selectType="SINGLE"
+            app:labelTextSize="13sp"
+            app:lineMargin="10dp"
+            app:wordMargin="10dp"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="其他筛选"
+            android:textColor="#999999"
+            android:textSize="@dimen/text_14sp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_customized_filter"
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="35dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_height="42dp">
+
+            <TextView
+                android:id="@+id/tv_order_filter_reset"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="重置"
+                android:background="@drawable/bg_order_filter_reset"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_order_filter_success"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="完成"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_btn_fight_group"
+                android:gravity="center"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

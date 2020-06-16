@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/base_tool_bar"/>
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.xk.mall.view.widget.ArcView
+                    android:layout_width="match_parent"
+                    app:bgColor="#444444"
+                    app:arcHeight="50dp"
+                    android:layout_height="200dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cut_continue_top"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_order_list_item"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="110dp"
+                            android:layout_marginTop="@dimen/dp_15"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:id="@+id/iv_cut_recommend_logo"
+                            android:layout_height="110dp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_cut_right"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginRight="@dimen/dp_15"
+                            android:layout_toRightOf="@id/rl_cut_recommend_logo"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_cut_name"
+                                android:layout_width="wrap_content"
+                                android:text="进口单肩包女士Visetos Liz双面用 中号MWP5SVI22德国"
+                                android:textSize="@dimen/text_14sp"
+                                android:textColor="@color/color_text"
+                                android:layout_marginTop="18dp"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:layout_height="36dp" />
+
+                            <TextView
+                                android:id="@+id/tv_cut_sku"
+                                android:textSize="10sp"
+                                android:textColor="#9B9B9B"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="26dp"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/ic_min_price"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content" />
+
+                                <TextView
+                                    android:id="@+id/tv_cut_now_price"
+                                    android:layout_width="wrap_content"
+                                    android:text="￥1078"
+                                    android:textColor="#F94119"
+                                    android:textSize="17sp"
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:textStyle="bold"
+                                    android:layout_height="wrap_content" />
+
+                                <TextView
+                                    android:id="@+id/tv_cut_real_price"
+                                    android:layout_width="wrap_content"
+                                    android:text="￥1600"
+                                    android:textColor="#CCCCCC"
+                                    android:textSize="10sp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rl_cut_recommend_time"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cut_time_tip"
+                            android:layout_width="wrap_content"
+                            android:text="剩余:"
+                            android:layout_centerVertical="true"
+                            android:textSize="@dimen/text_12sp"
+                            android:textColor="@color/color_text"
+                            android:layout_height="wrap_content" />
+
+                        <cn.iwgang.countdownview.CountdownView
+                            android:id="@+id/cv_countdown_cut"
+                            android:layout_width="wrap_content"
+                            app:isShowSecond="true"
+                            app:suffixGravity="center"
+                            app:timeTextColor="@color/color_text"
+                            app:timeTextSize="@dimen/text_12sp"
+                            app:isShowHour="true"
+                            android:layout_marginLeft="4dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/tv_cut_time_tip"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_cut_time_desc"
+                            android:layout_width="wrap_content"
+                            android:text="砍价过期"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@id/cv_countdown_cut"
+                            android:textColor="@color/color_text"
+                            android:textSize="@dimen/text_12sp"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/pb_fight_group"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="center"
+                        android:layout_height="17dp"
+                        android:max="100"
+                        android:layout_marginTop="13dp"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/layer_list_progress_drawable" />
+                    <!--砍价中-->
+                    <LinearLayout
+                        android:id="@+id/ll_cut_ing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_cut_continue_cut_price"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            tools:text="当前砍价:¥1020"
+                            android:layout_marginTop="8dp"
+                            android:textSize="19sp"
+                            android:textColor="#F94119"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_cut_continue_share"
+                            android:layout_width="match_parent"
+                            android:text="邀请好友帮忙砍价"
+                            android:gravity="center"
+                            android:layout_marginTop="25dp"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:paddingTop="12dp"
+                            android:textSize="@dimen/text_14sp"
+                            android:paddingBottom="12dp"
+                            android:background="@drawable/bg_btn_fight_group"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_cut_time_buy"
+                            android:layout_width="match_parent"
+                            android:text="直接买下得实惠"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:paddingTop="12dp"
+                            android:textSize="@dimen/text_14sp"
+                            android:textColor="@color/color_text"
+                            android:paddingBottom="12dp"
+                            android:background="@drawable/bg_order_detail_copy"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="购买成功后帮您砍价的好友可以获得现金红包哦！"
+                            android:textSize="@dimen/text_12sp"
+                            android:textColor="#999999"
+                            android:layout_marginBottom="22dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <!--砍价中 end-->
+                    <LinearLayout
+                        android:id="@+id/ll_cut_success"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/tv_cut_success_price"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="砍价成功: ¥1020"
+                            android:textColor="#fff94119"
+                            android:textSize="19sp"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/btn_cut_success"
+                            android:layout_width="match_parent"
+                            android:text="砍价成功！去支付"
+                            android:gravity="center"
+                            android:layout_marginTop="25dp"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="22dp"
+                            android:textSize="@dimen/text_14sp"
+                            android:background="@drawable/bg_btn_fight_group"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_order_list_item"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/ll_cut_continue_top"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="25dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_cut_list"
+                            android:layout_width="wrap_content"
+                            android:text="砍价记录"
+                            android:layout_marginLeft="25dp"
+                            android:textStyle="bold"
+                            android:textSize="17sp"
+                            android:textColor="@color/color_text"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:text="CUT PRICE LIST"
+                            android:layout_alignBaseline="@id/tv_cut_list"
+                            android:layout_toRightOf="@id/tv_cut_list"
+                            android:textSize="@dimen/text_13sp"
+                            android:textColor="#999999"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_cut_man"
+                            android:layout_width="wrap_content"
+                            android:text="8人助力底价"
+                            android:layout_marginRight="@dimen/dp_20"
+                            android:layout_alignBaseline="@id/tv_cut_list"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#4A4A4A"
+                            android:textSize="13sp"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_cut_continue"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:minHeight="100dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

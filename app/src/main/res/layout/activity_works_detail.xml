@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_works_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:descendantFocusability="blocksDescendants">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner_works_detail"
+                android:layout_width="match_parent"
+                android:layout_height="375dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_works_detail_top"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/banner_works_detail">
+
+                <ImageView
+                    android:id="@+id/iv_custom_head"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/me_head_icon" />
+
+                <TextView
+                    android:id="@+id/tv_custom_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv_custom_head"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/iv_custom_head"
+                    android:text="唐俊"
+                    android:textColor="@color/color_text"
+                    android:textSize="@dimen/text_14sp" />
+
+                <TextView
+                    android:id="@+id/tv_custom_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_custom_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@id/iv_custom_head"
+                    android:text="一周前"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/text_12sp" />
+
+                <Button
+                    android:id="@+id/btn_custom_add_attention"
+                    android:layout_width="70dp"
+                    android:layout_height="29dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_shop_attention_selector"
+                    android:stateListAnimator="@null"
+                    android:text="+ 关注"
+                    android:textColor="@drawable/bg_shop_attention_text_selector"
+                    android:textSize="@dimen/text_12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_work_name"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:layout_below="@id/rl_works_detail_top"
+                android:text="222"
+                android:textColor="#444444"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_works_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/tv_work_name"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="@dimen/dp_20"
+                android:lineSpacingExtra="6dp"
+                android:text="我从来都以为, 少女心是一个女性需要终身拥有的东西 它能阻止你变得俗气、势利。"
+                android:textColor="@color/color_text"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/view_works_detail"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/tv_works_detail_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="20dp"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/tv_works_detail_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_works_detail"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="评价"
+                android:textStyle="bold" />
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_below="@id/tv_works_detail_tip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.xk.mall.view.widget.CustomHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_works_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="60dp" />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/et_works_detail"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="23dp"
+            android:layout_toLeftOf="@id/tv_works_detail_msg"
+            android:background="@drawable/bg_works_detail_et"
+            android:drawableLeft="@drawable/ic_edit_pan"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:hint="写评价..."
+            android:paddingLeft="20dp"
+            android:textColor="@color/color_text"
+            android:textColorHint="#999999"
+            android:textSize="@dimen/text_14sp" />
+
+        <TextView
+            android:id="@+id/tv_works_detail_love"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@drawable/custom_love"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="2568"
+            android:textColor="#999999"
+            android:textSize="@dimen/text_12sp" />
+
+        <TextView
+            android:id="@+id/tv_works_detail_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="45dp"
+            android:layout_toLeftOf="@id/tv_works_detail_love"
+            android:drawableLeft="@drawable/custom_msg"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="1672"
+            android:textColor="#999999"
+            android:textSize="@dimen/text_12sp" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/works_detail_tool_bar" />
+
+</RelativeLayout>

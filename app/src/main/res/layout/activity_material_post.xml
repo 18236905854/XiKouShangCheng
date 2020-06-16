@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F4F4">
+
+    <include
+        layout="@layout/base_tool_bar" android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="?attr/actionBarSize">
+
+        <!--左返回键按钮-->
+        <LinearLayout
+            android:id="@+id/ll_material_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingLeft="15dp"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_left_back"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back" />
+
+        </LinearLayout>
+
+        <!--中间标题-->
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:layout_centerInParent="true"
+            android:text="提交截图"
+            android:singleLine="true"
+            android:textColor="@color/color_title"
+            android:textSize="18sp" />
+
+        <!--右边图片，例如搜索-->
+        <RelativeLayout
+            android:id="@+id/rl_material_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/iv_right_img"
+                android:layout_width="18dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_material_right"
+                android:layout_height="18dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_cart_num"
+                android:layout_width="wrap_content"
+                android:textColor="@color/color_text"
+                android:gravity="center"
+                android:textSize="9sp"
+                android:text="上传记录"
+                android:layout_below="@id/iv_right_img"
+                android:layout_marginTop="3dp"
+                android:layout_height="16dp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/colorWhite"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_material_point">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_material_one"
+                    app:riv_corner_radius="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/iv_plus_one"
+                    android:src="@drawable/ic_plus"
+                    android:layout_centerInParent="true"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+                
+                <RelativeLayout
+                    android:layout_width="21dp"
+                    android:visibility="gone"
+                    android:id="@+id/rl_right_close"
+                    android:background="@drawable/bg_material_close"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="21dp">
+                    
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:src="@drawable/ic_material_close"
+                        android:layout_centerInParent="true"
+                        android:layout_height="10dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_material_point">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_material_two"
+                    app:riv_corner_radius="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:src="@drawable/ic_plus"
+                    android:id="@+id/iv_plus_two"
+                    android:layout_centerInParent="true"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+
+                <RelativeLayout
+                    android:layout_width="21dp"
+                    android:id="@+id/rl_right_close_two"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_material_close"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="21dp">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:src="@drawable/ic_material_close"
+                        android:layout_centerInParent="true"
+                        android:layout_height="10dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:background="@drawable/bg_material_point">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_material_three"
+                    app:riv_corner_radius="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:src="@drawable/ic_plus"
+                    android:id="@+id/iv_plus_three"
+                    android:layout_centerInParent="true"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+
+                <RelativeLayout
+                    android:layout_width="21dp"
+                    android:id="@+id/rl_right_close_three"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_material_close"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="21dp">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:src="@drawable/ic_material_close"
+                        android:layout_centerInParent="true"
+                        android:layout_height="10dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_remarks"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:textSize="@dimen/text_12sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:textColor="#CCCCCC"
+            android:lineSpacingMultiplier="1.3"
+            android:layout_width="wrap_content"
+            android:text="@string/material_tips"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="提交"
+        android:enabled="false"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_register_btn_selector"
+        android:textSize="@dimen/text_14sp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_times"
+        android:layout_width="wrap_content"
+        android:text="今日可完成0次，已完成0次"
+        android:textSize="@dimen/text_12sp"
+        android:textColor="#999999"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

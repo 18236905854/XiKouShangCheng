@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/wug_main_tool_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_wug_tool_bar"
+            android:layout_height="match_parent">
+
+            <com.xk.mall.view.widget.CustomHeader
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_wug_tool_bar"
+                android:layout_height="wrap_content" />
+
+            <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:id="@+id/coordinator"
+                android:background="#F4F4F4"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/appbar_wug"
+                    app:elevation="0dp"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingBottom="50dp"
+                    android:background="@drawable/bg_wug_top_radius">
+
+                    <com.youth.banner.XKBannerMany
+                        android:id="@+id/banner_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        app:layout_scrollFlags="scroll"
+                        app:indicator_drawable_selected="@drawable/round_rect_select"
+                        app:indicator_drawable_unselected="@drawable/round_rect_unselect"/>
+                    
+                    <LinearLayout
+                        android:id="@+id/ll_clock"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content">
+                        
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/ic_clock"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_clock_time"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="7dp"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/text_14sp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_clock_type"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/text_14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <cn.iwgang.countdownview.CountdownView
+                            android:id="@+id/cv_clock"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            app:timeTextColor="#C84B7E"
+                            app:isHideTimeBackground="false"
+                            app:suffixGravity="center"
+                            app:timeBgBorderColor="@color/white"
+                            app:isShowTimeBgBorder="true"
+                            app:timeBgColor="@color/white"
+                            app:timeBgBorderRadius="2dp"
+                            app:isShowHour="true"
+                            app:isShowMinute="true"
+                            app:suffixHour=":"
+                            app:suffixMinute=":"
+                            app:suffixTextColor="@color/white"
+                            app:timeTextSize="@dimen/text_12sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content" />
+                        
+                    </LinearLayout>
+
+                    <com.flyco.tablayout.WuGSlidingTabLayout
+                        android:id="@+id/tablayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        app:tl_indicator_color="#FFFFFF"
+                        app:tl_indicator_height="2dp"
+                        app:tl_indicator_src="@drawable/ic_wug_indicator"
+                        app:tl_textsize="14sp"
+                        app:tl_indicator_corner_radius="2dp"
+                        app:tl_indicator_width_equal_title="true"
+                        app:tl_tab_space_equal="true"
+                        app:tl_tab_padding="6dp"
+                        app:tl_tab_width="80dp"
+                        app:tl_textBold="SELECT"
+                        app:tl_textSelectColor="#FFFFFF"
+                        app:tl_textUnselectColor="#FFFFFF" />
+                </android.support.design.widget.AppBarLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-40dp"
+                    android:background="@drawable/bg_home_cardview"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:overScrollMode="never"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </android.support.design.widget.CoordinatorLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_wug_money"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="200dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="7dp"
+            android:background="@drawable/bg_wug_money"
+            android:paddingBottom="7dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_wug_money_tip"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/text_14sp"
+                android:textColor="#7D521A"
+                android:textStyle="bold"
+                android:text="吾G\n限购"
+                android:layout_height="wrap_content" />
+            
+            <ImageView
+                android:id="@+id/iv_wug_money_arrow"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_global_right"
+                android:layout_toRightOf="@id/tv_wug_money_tip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_wug_total_money"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="6dp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_wug_money_arrow"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="每月限购"
+                        android:textStyle="bold"
+                        android:textColor="#6A420F"
+                        android:textSize="@dimen/text_12sp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_wug_total_money"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textSize="11sp"
+                        android:textColor="#7D521A"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="可购余额"
+                        android:textColor="#6A420F"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_12sp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_wug_discount_money"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textSize="11sp"
+                        android:textColor="#7D521A"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="下次刷新"
+                        android:textColor="#6A420F"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_12sp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_wug_refresh_time"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textSize="11sp"
+                        android:textColor="#7D521A"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

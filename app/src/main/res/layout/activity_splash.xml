@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:id="@+id/rl_home"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_tool_bar"
+        android:visibility="gone"/>
+
+</RelativeLayout>

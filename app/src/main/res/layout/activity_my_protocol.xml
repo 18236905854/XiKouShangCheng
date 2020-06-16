@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_tool_bar"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:id="@+id/rl_protocol_sell"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_height="60dp">
+
+        <TextView android:layout_width="wrap_content"
+            android:textColor="#444444"
+            android:textSize="15sp"
+            android:text="@string/protocol_sell"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"/>
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_protocol_sell"
+            android:layout_centerVertical="true"
+            android:src="@drawable/setting_icon_arrow"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/tv_protocol_sell"
+            android:layout_toLeftOf="@id/iv_protocol_sell"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#E4E4E4"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:id="@+id/rl_protocol_user"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_height="60dp">
+
+        <TextView android:layout_width="wrap_content"
+            android:textColor="#444444"
+            android:textSize="15sp"
+            android:text="@string/protocol_user"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"/>
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_setting_protocol"
+            android:layout_centerVertical="true"
+            android:src="@drawable/setting_icon_arrow"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/tv_setting_protocol"
+            android:layout_toLeftOf="@id/iv_setting_protocol"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#E4E4E4"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

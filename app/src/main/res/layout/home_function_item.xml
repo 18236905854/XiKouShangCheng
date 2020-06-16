@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/img_function"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        tools:src="@mipmap/home_ic_wu_g"/>
+
+    <TextView
+        android:id="@+id/tv_function_name"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/text_12sp"
+        android:layout_height="wrap_content"
+        android:text="热排行"
+        android:textColor="#444444"/>
+
+</LinearLayout>

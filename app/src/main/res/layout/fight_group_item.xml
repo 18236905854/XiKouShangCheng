@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="@dimen/dp_15"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_fight_group_logo"
+                android:layout_width="110dp"
+                android:scaleType="centerCrop"
+                android:layout_height="110dp" />
+
+            <TextView
+                android:id="@+id/tv_fight_group_authen"
+                android:text="已认证"
+                android:textSize="9sp"
+                android:visibility="gone"
+                android:background="@drawable/bg_fight_group_authen"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="17dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_fight_group_name"
+                android:layout_width="match_parent"
+                android:maxLines="2"
+                android:textSize="@dimen/text_14sp"
+                android:textColor="@color/color_text"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_fight_group_end_time"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="7dp"
+                android:layout_below="@id/tv_fight_group_name"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="距离结束时间:"
+                    android:textSize="10sp"
+                    android:visibility="invisible"
+                    android:textColor="#999999"
+                    android:layout_height="wrap_content" />
+
+                <cn.iwgang.countdownview.CountdownView
+                    android:id="@+id/count_down_fight_group"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:isConvertDaysToHours="true"
+                    android:visibility="gone"
+                    app:suffixGravity="center"
+                    android:layout_marginLeft="8dp"
+                    app:isShowHour="true"
+                    app:isShowMinute="true"
+                    app:isShowSecond="true"
+                    app:isShowMillisecond="false"
+                    app:suffixHour=":"
+                    app:suffixMinute=":"
+                    app:suffixTextColor="#999999"
+                    app:suffixTextSize="10sp"
+                    app:timeTextColor="#999999"
+                    app:timeTextSize="10sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_fight_group_tip"
+                android:layout_width="wrap_content"
+                android:text="@string/money"
+                android:layout_below="@id/ll_fight_group_end_time"
+                android:layout_marginTop="15dp"
+                android:textColor="#F94119"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_commodity_price"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/tv_fight_group_tip"
+                android:layout_below="@id/ll_fight_group_end_time"
+                android:layout_marginTop="7dp"
+                android:textSize="17sp"
+                android:textColor="#F94119"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_fight_group_price"
+                android:textSize="10sp"
+                android:textColor="#999999"
+                android:layout_toRightOf="@id/tv_commodity_price"
+                android:layout_alignBottom="@id/tv_commodity_price"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:id="@+id/pb_fight_group"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="95dp"
+                android:layout_height="9dp"
+                android:max="100"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_below="@id/tv_fight_group_price"
+                android:progress="20"
+                android:progressDrawable="@drawable/layer_list_progress_drawable" />
+
+            <TextView
+                android:id="@+id/tv_fight_group_last"
+                android:textSize="8sp"
+                android:textColor="#999999"
+                android:layout_toRightOf="@id/pb_fight_group"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/tv_fight_group_price"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_fight_group"
+                android:layout_width="70dp"
+                android:text="马上抢"
+                android:clickable="false"
+                android:stateListAnimator="@null"
+                android:background="@drawable/bg_btn_fight_group"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_12sp"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@id/tv_fight_group_last"
+                android:layout_height="29dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#E4E4E4"
+        android:layout_height="0.5dp"/>
+
+
+</LinearLayout>
