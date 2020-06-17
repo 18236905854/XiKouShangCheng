@@ -9,13 +9,11 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.blankj.utilcode.util.ActivityUtils;
-import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.TimeUtils;
 import com.kennyc.view.MultiStateView;
 import com.xk.mall.R;
 import com.xk.mall.base.BaseModel;
-import com.xk.mall.base.BasePresenter;
 import com.xk.mall.model.entity.CouponDetailBean;
 import com.xk.mall.model.entity.CouponDetailRecordBean;
 import com.xk.mall.model.eventbean.UpdateCouponEvent;
@@ -92,11 +90,11 @@ public class CouponDetailActivity extends BaseActivity<CouponDetailPresenter> im
         couponId = intent.getStringExtra(COUPON_ID);
         int type = intent.getIntExtra(COUPON_TYPE, 1);
         transferOutBalance = intent.getIntExtra(OUT_BALANCE, 0);
-        if(type == 0){//可用显示转赠
-            tvCouponGiveAway.setVisibility(View.VISIBLE);
-        }else {
+//        if(type == 0){//可用显示转赠
+//            tvCouponGiveAway.setVisibility(View.VISIBLE);
+//        }else {
             tvCouponGiveAway.setVisibility(View.GONE);
-        }
+//        }
         mPresenter.getCouponDetail(couponId);
     }
 

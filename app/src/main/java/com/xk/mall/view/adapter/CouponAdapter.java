@@ -44,7 +44,6 @@ public class CouponAdapter extends CommonAdapter<CouponBean> {
 
     @Override
     protected void convert(ViewHolder holder, CouponBean couponBean, int position) {
-        holder.setVisible(R.id.tv_coupon_item_detail, false);
 
         holder.setText(R.id.tv_coupon_item_money, "" + PriceUtil.divideCoupon(couponBean.balance));
         holder.setText(R.id.tv_coupon_item_sum_money, "" + PriceUtil.divideCoupon(couponBean.total));
@@ -61,7 +60,7 @@ public class CouponAdapter extends CommonAdapter<CouponBean> {
             if(couponBean.useable == 1){
                 holder.setText(R.id.tv_coupon_item_detail, "转赠");
                 holder.setVisible(R.id.iv_coupon_active, false);
-                holder.setVisible(R.id.tv_coupon_item_detail, true);
+                holder.setVisible(R.id.tv_coupon_item_detail, false);
             }else {
                 holder.setVisible(R.id.iv_coupon_active, true);
                 holder.setVisible(R.id.tv_coupon_item_detail, false);
@@ -73,6 +72,7 @@ public class CouponAdapter extends CommonAdapter<CouponBean> {
             rlCouponBg.setBackgroundResource(R.drawable.bg_fail_coupon);
             holder.setText(R.id.tv_coupon_item_detail, "已失效");
         }
+
         if(couponBean.couponType == 1){//通用券
             holder.setText(R.id.tv_coupon_rang, "适用范围:全球买手、0元抢、O2O");
         }
@@ -86,5 +86,7 @@ public class CouponAdapter extends CommonAdapter<CouponBean> {
                 }
             }
         });
+
+        holder.setVisible(R.id.tv_coupon_item_detail, false);
     }
 }
